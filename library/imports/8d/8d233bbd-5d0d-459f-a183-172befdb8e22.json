@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "02_ChickenHead",
+    "texture": "0d18f67d-dfd3-4c33-bebd-2bc7902d9c18",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      549,
+      541
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      549,
+      541
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "TotalWin_BetScore",
+    "texture": "51e080ae-3a3c-4168-8ef0-87257f3069ac",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      349,
+      284
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      349,
+      284
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

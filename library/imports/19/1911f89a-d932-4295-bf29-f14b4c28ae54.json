@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Autoplay-Logo",
+    "texture": "88f5ffa5-6edc-4d1b-bb8e-1999839edb98",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      87,
+      63
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      87,
+      63
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

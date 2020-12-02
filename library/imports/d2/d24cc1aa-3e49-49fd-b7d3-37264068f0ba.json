@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ChickenCharacterAnimation_021",
+    "texture": "7e381645-896e-4bb2-8da7-1497e610f330",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      282,
+      267
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      282,
+      267
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

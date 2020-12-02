@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "ChickenAnimation_Click_Hold_02",
+    "texture": "c3a914af-24c0-4d79-aad8-2e0cbeba307d",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      282,
+      267
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      282,
+      267
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

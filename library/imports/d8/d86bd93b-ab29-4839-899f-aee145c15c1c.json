@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "BalanceAmount_Bar",
+    "texture": "c3aab3ee-7452-465d-ba5c-a1572d86b0be",
+    "atlas": "",
+    "rect": [
+      4,
+      1,
+      345,
+      91
+    ],
+    "offset": [
+      -4.5,
+      0.5
+    ],
+    "originalSize": [
+      362,
+      94
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

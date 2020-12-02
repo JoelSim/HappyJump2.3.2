@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Autoplay_SelectionFrame",
+    "texture": "feb99538-6afa-4c2b-b821-0bc23e6c900b",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1067,
+      748
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1067,
+      748
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

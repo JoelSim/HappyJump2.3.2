@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "LoadingAnimation00018",
+    "texture": "22653764-4171-4792-b043-ea99c4801902",
+    "atlas": "",
+    "rect": [
+      102,
+      39,
+      366,
+      73
+    ],
+    "offset": [
+      -7,
+      4.5
+    ],
+    "originalSize": [
+      584,
+      160
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

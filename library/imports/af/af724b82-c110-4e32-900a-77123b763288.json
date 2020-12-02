@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "SoundMute_Button",
+    "texture": "00bade2e-b12f-4f82-9ba3-8920d3918a01",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      124,
+      126
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      124,
+      126
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

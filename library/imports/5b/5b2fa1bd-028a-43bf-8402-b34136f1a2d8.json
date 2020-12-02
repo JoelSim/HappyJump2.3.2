@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Autoplay_DecreaseButton",
+    "texture": "5e693371-5aa2-4a92-99d3-c8abfb681054",
+    "atlas": "",
+    "rect": [
+      2,
+      3,
+      156,
+      162
+    ],
+    "offset": [
+      1,
+      -0.5
+    ],
+    "originalSize": [
+      158,
+      167
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

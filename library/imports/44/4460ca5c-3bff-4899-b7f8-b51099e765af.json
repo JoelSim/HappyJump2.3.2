@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "TotalWin_ShininEffect",
+    "texture": "7152036a-8463-4397-beaa-8ddd1d2c163e",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      821,
+      894
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      821,
+      894
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "01_SignBoard",
+    "texture": "de693137-8783-455d-9747-f6d06b976d41",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      202,
+      293
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      202,
+      293
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

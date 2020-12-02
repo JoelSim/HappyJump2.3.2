@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "EffectAnimation_Winning_09",
+    "texture": "cc5136ff-33b5-44ff-9af7-dca038c655a9",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1028,
+      932
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1028,
+      932
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

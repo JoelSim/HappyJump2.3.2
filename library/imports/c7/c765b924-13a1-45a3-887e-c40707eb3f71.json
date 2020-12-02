@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "TotalWin_TitleFrame",
+    "texture": "c693d5cc-04a1-4260-8f75-b22d790d114f",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      864,
+      199
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      864,
+      199
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

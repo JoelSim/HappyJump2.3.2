@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "fc16465d-f5a4-4670-8ebc-e5a4d16507eb",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 192,
+  "height": 150,
+  "platformSettings": {},
+  "subMetas": {
+    "TotalWin_HomeButton": {
+      "ver": "1.0.4",
+      "uuid": "107b1470-8ce6-4787-acdf-f8dcd4222a9d",
+      "rawTextureUuid": "fc16465d-f5a4-4670-8ebc-e5a4d16507eb",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 192,
+      "height": 150,
+      "rawWidth": 192,
+      "rawHeight": 150,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

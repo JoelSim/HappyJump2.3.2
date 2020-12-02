@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "SettingPage_Frame",
+    "texture": "b64c5c51-cf95-43ed-8f92-11cc80911a08",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      769,
+      796
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      769,
+      796
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

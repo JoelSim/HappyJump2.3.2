@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "BalanceFrame",
+    "texture": "8cfa9c84-6d7f-43ec-b6df-6f7024fd5204",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      413,
+      117
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      413,
+      117
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

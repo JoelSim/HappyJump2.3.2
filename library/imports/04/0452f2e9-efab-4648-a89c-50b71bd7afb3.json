@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Setting_SoundButton- Off",
+    "texture": "65431507-b5ef-4b12-9d05-9d4254c4da72",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      313,
+      82
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      313,
+      82
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "e35b41c1-e0cd-44ff-b2da-0f28f19de39a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 282,
+  "height": 267,
+  "platformSettings": {},
+  "subMetas": {
+    "ChickenCharacterAnimation_06": {
+      "ver": "1.0.4",
+      "uuid": "32e936e8-7aff-40bd-9bdd-e6b8c4d57f5c",
+      "rawTextureUuid": "e35b41c1-e0cd-44ff-b2da-0f28f19de39a",
+      "trimType": "custom",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 282,
+      "height": 267,
+      "rawWidth": 282,
+      "rawHeight": 267,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "SettingPage_Title",
+    "texture": "1c945841-13d0-483e-afb4-6155a77a50ac",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      231,
+      49
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      231,
+      49
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "02_ChickenFeather",
+    "texture": "b0223a06-d3fb-44e8-82e5-ad8029d0c862",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      346,
+      394
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      346,
+      394
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

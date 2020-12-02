@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "HappyJump_Platform 1",
+    "texture": "e86b5ca0-d163-4b94-96be-ddd700eab59f",
+    "atlas": "",
+    "rect": [
+      47,
+      13,
+      311,
+      223
+    ],
+    "offset": [
+      23.5,
+      -4.5
+    ],
+    "originalSize": [
+      358,
+      240
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

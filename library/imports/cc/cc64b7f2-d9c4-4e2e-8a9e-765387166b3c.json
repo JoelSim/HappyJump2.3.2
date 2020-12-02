@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "BetPage_choose-your-bet- range",
+    "texture": "5ed7f881-676d-4dc6-96c6-61e9f3f9b1b3",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      514,
+      45
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      514,
+      45
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

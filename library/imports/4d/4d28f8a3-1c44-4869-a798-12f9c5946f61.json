@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "TopRightButton_Fullscreen",
+    "texture": "8fe94b10-3ad4-49c3-8c5b-adb55376f6de",
+    "atlas": "",
+    "rect": [
+      26,
+      17,
+      64,
+      64
+    ],
+    "offset": [
+      -0.5,
+      -0.5
+    ],
+    "originalSize": [
+      117,
+      97
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

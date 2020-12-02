@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "StarAnimation_Winning_019",
+    "texture": "61806787-f67b-4ad1-9668-759ac839f6eb",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      1044,
+      520
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      1044,
+      520
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

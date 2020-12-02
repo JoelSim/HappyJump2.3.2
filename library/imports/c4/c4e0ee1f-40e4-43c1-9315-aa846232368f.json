@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "5-Cactus",
+    "texture": "a044be1b-b541-420e-8cf5-c938ccf13cab",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      268,
+      253
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      268,
+      253
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

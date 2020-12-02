@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "BetAmount_Bar",
+    "texture": "76d48e2f-2ab8-4938-b688-985312ac47ad",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      349,
+      93
+    ],
+    "offset": [
+      -6.5,
+      0.5
+    ],
+    "originalSize": [
+      362,
+      94
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

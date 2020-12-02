@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Autoplay_IncreaseButton",
+    "texture": "c8ac3c98-4ca6-48b6-9bf5-429ed22e59b7",
+    "atlas": "",
+    "rect": [
+      3,
+      4,
+      154,
+      161
+    ],
+    "offset": [
+      1,
+      -1
+    ],
+    "originalSize": [
+      158,
+      167
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

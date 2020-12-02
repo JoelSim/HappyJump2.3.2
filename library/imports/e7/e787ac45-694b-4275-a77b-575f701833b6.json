@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Setting_LanguageBar",
+    "texture": "119c4109-5868-4fcf-b33f-6cbd8598b350",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      353,
+      66
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      353,
+      66
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

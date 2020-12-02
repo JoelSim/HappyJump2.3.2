@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "SettingPage_BetHistory(EST)",
+    "texture": "20c5ab52-73ff-4eca-89eb-d5102458ffd3",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      348,
+      63
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      348,
+      63
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

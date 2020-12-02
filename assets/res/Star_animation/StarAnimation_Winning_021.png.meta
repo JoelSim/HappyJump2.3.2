@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.4",
+  "uuid": "6c35f16b-9bb5-4d3e-9748-3a5cf9df17f9",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 1044,
+  "height": 520,
+  "platformSettings": {},
+  "subMetas": {
+    "StarAnimation_Winning_021": {
+      "ver": "1.0.4",
+      "uuid": "dfeccaf1-8312-4433-974b-7f8743593068",
+      "rawTextureUuid": "6c35f16b-9bb5-4d3e-9748-3a5cf9df17f9",
+      "trimType": "custom",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1044,
+      "height": 520,
+      "rawWidth": 1044,
+      "rawHeight": 520,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Setting_Frame_InGamePage",
+    "texture": "dadee5ce-4602-427a-a8b8-2b6e4e6e1fee",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      834,
+      973
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      834,
+      973
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
