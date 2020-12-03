@@ -147,6 +147,9 @@ cc.Class({
                             'changeBet':true,
 
                         };
+                        if(globalData.isEncrypt){
+                            emit_result = btoa(JSON.stringify(emit_result));
+                        }
                         globalData.getSocket().emit('send-result', emit_result);
                         this.generatingBalance = true;
                         this.lastBetting = this.currentBetting;
@@ -175,7 +178,9 @@ cc.Class({
                             "requestType": "bet",
                             "currentBetSlot":globalData.currentBetSlot,
                         }
-
+                        if(globalData.isEncrypt){
+                            emit_obj = btoa(JSON.stringify(emit_obj));
+                        }
                         globalData.getSocket().emit('changeBet', emit_obj);
                         this.generateScore2();
                     }
@@ -250,6 +255,9 @@ cc.Class({
                         'changeBet':true,
 
                     };
+                    if(globalData.isEncrypt){
+                        emit_result = btoa(JSON.stringify(emit_result));
+                    }
                     globalData.getSocket().emit('send-result', emit_result);
                     this.lastBetting = this.currentBetting;
                     this.generatingBalance = true;
@@ -323,6 +331,9 @@ cc.Class({
                     'changeBet':true,
 
                 };
+                if(globalData.isEncrypt){
+                    emit_result = btoa(JSON.stringify(emit_result));
+                }
                 globalData.getSocket().emit('send-result', emit_result);
             }
 
@@ -376,7 +387,9 @@ cc.Class({
                         'ticket_id': globalData.ticket_id,
                         "currentBetSlot":globalData.currentBetSlot,
                     }
-
+                    if(globalData.isEncrypt){
+                        emit_obj = btoa(JSON.stringify(emit_obj));
+                    }
                     globalData.getSocket().emit('changeBet', emit_obj);
                     this.generateScore2();
                     this.generatingBalance = false;

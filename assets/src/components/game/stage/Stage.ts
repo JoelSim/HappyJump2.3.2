@@ -170,6 +170,9 @@ export class Stage extends cc.Component {
                                 "changeBet":false,
 
                             };
+                            if(global.isEncrypt){
+                                emit_result = btoa(JSON.stringify(emit_result));
+                            }
                             global.getSocket().emit('send-result', emit_result);
                             this.generatingBalance = true;
                         }
@@ -206,6 +209,9 @@ export class Stage extends cc.Component {
                             "changeBet":false,
 
                         };
+                        if(global.isEncrypt){
+                            emit_result = btoa(JSON.stringify(emit_result));
+                        }
                         global.getSocket().emit('send-result', emit_result);
                         this.generatingBalance = true;
                     }
@@ -358,6 +364,9 @@ export class Stage extends cc.Component {
                         "currentBetSlot":global.currentBetSlot,
 
                     }
+                    if(global.isEncrypt){
+                        emit_obj = btoa(JSON.stringify(emit_obj));
+                    }
                     cc.find("Canvas/InGameBetting").getComponent("InGameBetting").playerDie=this.playerDie;
                     if(!this.playerDie){
                         global.getSocket().emit('changeBet', emit_obj);
@@ -476,6 +485,9 @@ export class Stage extends cc.Component {
                                         "changeBet":false,
 
                                     };
+                                    if(global.isEncrypt){
+                                        emit_result = btoa(JSON.stringify(emit_result));
+                                    }
                                     global.getSocket().emit('send-result', emit_result);
                                 }
                                 else{
@@ -513,6 +525,9 @@ export class Stage extends cc.Component {
                                     "changeBet":false,
 
                                 };
+                                if(global.isEncrypt){
+                                    emit_result = btoa(JSON.stringify(emit_result));
+                                }
                                 global.getSocket().emit('send-result', emit_result);
                             }
                             else{

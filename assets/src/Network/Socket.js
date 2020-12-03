@@ -34,6 +34,26 @@ cc.Class({
         // }
     },
 
+    //#region Encryption
+    decode(data){
+        // convert from base64 and return object in string
+        return atob(data);
+    },
+
+    encode(data){
+        // convert string object to base64 string and return the string
+        return btoa(data);
+    },
+
+    socketReceiveAction(data){
+        if(global.isEncrypt){
+            return JSON.parse(this.decode(data));
+        }
+        else{
+            return data;
+        }
+    },
+
     isParsable : function (input) {
         try {
             JSON.parse(input);
@@ -50,6 +70,7 @@ cc.Class({
             return data;
         }
     },
+    //#endregion
 
     connectSocket: function(data){
         cc.log("--------- Connecting Socket ----------------");
@@ -115,9 +136,8 @@ cc.Class({
     listenEvent: function(){
         var self = this;
         global.getSocket().on('balance', function(data){
-            // data = self.parseDataFormat(data);
-            // var resp = data;
-            
+            data = self.socketReceiveAction(data);
+
             global.settings.balance = data.after_balance;
             global.finishGeneratingBalance = true;
         });
@@ -131,6 +151,7 @@ cc.Class({
         });
 
         global.getSocket().on('getResult', function(data){
+            data = self.socketReceiveAction(data);
             global.ticket_id = data.ticket_id;
             global.settings.balance = data.balance;
             global.consoScore = data.consoleScore;
@@ -141,6 +162,12 @@ cc.Class({
         });
 
         
+        global.getSocket().on("cheat",function(data){
+            data = self.socketReceiveAction(data);
+            
+            global.errorMessage = data.error;
+            global.playerBalance = data.after_balance;
+        }),
 
         global.getSocket().on('kick-user-maintenance', function(data){
             // data = self.parseDataFormat(data);
