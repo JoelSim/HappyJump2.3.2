@@ -43,6 +43,22 @@ cc.Class({
     //     URL.lang = "en";
     // }
   },
+  //#region Encryption
+  decode: function decode(data) {
+    // convert from base64 and return object in string
+    return atob(data);
+  },
+  encode: function encode(data) {
+    // convert string object to base64 string and return the string
+    return btoa(data);
+  },
+  socketReceiveAction: function socketReceiveAction(data) {
+    if (global.isEncrypt) {
+      return JSON.parse(this.decode(data));
+    } else {
+      return data;
+    }
+  },
   isParsable: function isParsable(input) {
     try {
       JSON.parse(input);
@@ -59,6 +75,7 @@ cc.Class({
       return data;
     }
   },
+  //#endregion
   connectSocket: function connectSocket(data) {
     cc.log("--------- Connecting Socket ----------------");
     var self = this;
@@ -115,8 +132,7 @@ cc.Class({
   listenEvent: function listenEvent() {
     var self = this;
     global.getSocket().on('balance', function (data) {
-      // data = self.parseDataFormat(data);
-      // var resp = data;
+      data = self.socketReceiveAction(data);
       global.settings.balance = data.after_balance;
       global.finishGeneratingBalance = true;
     });
@@ -127,6 +143,7 @@ cc.Class({
       console.log("success reconnect");
     });
     global.getSocket().on('getResult', function (data) {
+      data = self.socketReceiveAction(data);
       global.ticket_id = data.ticket_id;
       global.settings.balance = data.balance;
       global.consoScore = data.consoleScore;
@@ -134,7 +151,11 @@ cc.Class({
       global.platform = data.platform;
       global.finishGetData = true;
     });
-    global.getSocket().on('kick-user-maintenance', function (data) {
+    global.getSocket().on("cheat", function (data) {
+      data = self.socketReceiveAction(data);
+      global.errorMessage = data.error;
+      global.playerBalance = data.after_balance;
+    }), global.getSocket().on('kick-user-maintenance', function (data) {
       // data = self.parseDataFormat(data);
       // var resp = data;
       data = self.parseDataFormat(data);

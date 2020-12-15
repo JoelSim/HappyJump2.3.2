@@ -249,7 +249,7 @@
       "array": [
         0,
         0,
-        386.24733008785967,
+        387.1087240627165,
         0,
         0,
         0,
@@ -5277,7 +5277,7 @@
     },
     "_enabled": true,
     "autoJump": false,
-    "failChance": 4,
+    "failChance": -1,
     "player": {
       "__id__": 125
     },
@@ -13276,8 +13276,8 @@
     "target": {
       "__id__": 332
     },
-    "component": "SettingManager",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "f4205UA9ohBwpoCELzXYWU1",
     "handler": "openSetting",
     "customEventData": ""
   },
@@ -13534,7 +13534,11 @@
       "__id__": 335
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -13634,7 +13638,11 @@
       "__id__": 338
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -13889,10 +13897,14 @@
       "__id__": 343
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
-    "_string": "x0.5",
-    "_N$string": "x0.5",
+    "_string": "x1",
+    "_N$string": "x1",
     "_fontSize": 60,
     "_lineHeight": 40,
     "_enableWrapText": false,
@@ -13935,7 +13947,11 @@
       "__id__": 340
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -14229,7 +14245,11 @@
       "__id__": 353
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "Back",
     "_N$string": "Back",
@@ -14257,7 +14277,11 @@
       "__id__": 352
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -14525,7 +14549,11 @@
       "__id__": 360
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "Restart",
     "_N$string": "Restart",
@@ -14553,7 +14581,11 @@
       "__id__": 359
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -14821,7 +14853,11 @@
       "__id__": 367
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "Rules",
     "_N$string": "Rules",
@@ -14849,7 +14885,11 @@
       "__id__": 366
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -15088,7 +15128,11 @@
       "__id__": 372
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "Quit",
     "_N$string": "Quit",
@@ -15116,7 +15160,11 @@
       "__id__": 371
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -15480,7 +15528,11 @@
       "__id__": 381
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "x5",
     "_N$string": "x5",
@@ -15526,7 +15578,11 @@
       "__id__": 378
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -15916,7 +15972,11 @@
       "__id__": 393
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "x10",
     "_N$string": "x10",
@@ -15962,7 +16022,11 @@
       "__id__": 390
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -16352,7 +16416,11 @@
       "__id__": 405
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "x20",
     "_N$string": "x20",
@@ -16398,7 +16466,11 @@
       "__id__": 402
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -16623,7 +16695,11 @@
       "__id__": 414
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -16713,7 +16789,11 @@
       "__id__": 416
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -17579,8 +17659,8 @@
     "target": {
       "__id__": 228
     },
-    "component": "AudioManager",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "4131c/FWx9Dd7nWFL8TgiJp",
     "handler": "playUIbuttonSound",
     "customEventData": ""
   },

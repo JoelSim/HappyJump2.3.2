@@ -159,7 +159,12 @@ var Stage = /** @class */ (function (_super) {
                                 'api_url': global.api_url,
                                 "changeBet": false,
                             };
-                            global.getSocket().emit('send-result', emit_result);
+                            if (global.isEncrypt) {
+                                global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                            }
+                            else {
+                                global.getSocket().emit('send-result', emit_result);
+                            }
                             _this.generatingBalance = true;
                         }
                         else {
@@ -193,7 +198,12 @@ var Stage = /** @class */ (function (_super) {
                             'api_url': global.api_url,
                             "changeBet": false,
                         };
-                        global.getSocket().emit('send-result', emit_result);
+                        if (global.isEncrypt) {
+                            global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                        }
+                        else {
+                            global.getSocket().emit('send-result', emit_result);
+                        }
                         _this.generatingBalance = true;
                     }
                     else {
@@ -290,12 +300,12 @@ var Stage = /** @class */ (function (_super) {
         var consoleScore;
         // calculate multiplier
         platform = (Math.random() * (1 - 0) + 0);
-        if (platform >= 0.8) {
+        if (platform >= 0.4) {
             platform = 1;
         }
         multiplierPerfect = (Math.random() * (10 - 2) + 2);
-        multiplierConso = (Math.random() * (1 - 0.2) + 0.2);
-        perfectScore = Math.round((cc.find("Canvas/InGameBetting").getComponent("InGameBetting").currentBetting * multiplierPerfect) * 10) / 10;
+        multiplierConso = 0.2;
+        perfectScore = (cc.find("Canvas/InGameBetting").getComponent("InGameBetting").currentBetting * Math.floor(multiplierPerfect));
         consoleScore = Math.round((cc.find("Canvas/InGameBetting").getComponent("InGameBetting").currentBetting * multiplierConso) * 10) / 10;
         global.consoScore = consoleScore;
         global.perfectScore = perfectScore;
@@ -329,7 +339,12 @@ var Stage = /** @class */ (function (_super) {
                     };
                     cc.find("Canvas/InGameBetting").getComponent("InGameBetting").playerDie = this.playerDie;
                     if (!this.playerDie) {
-                        global.getSocket().emit('changeBet', emit_obj);
+                        if (global.isEncrypt) {
+                            global.getSocket().emit('changeBet', btoa(JSON.stringify(emit_obj)));
+                        }
+                        else {
+                            global.getSocket().emit('changeBet', emit_obj);
+                        }
                         this.generatingScore = true;
                     }
                     else {
@@ -399,10 +414,7 @@ var Stage = /** @class */ (function (_super) {
                     }
                     var randomPerfect = 0;
                     if (global.platform == 1) {
-                        randomPerfect = this.RandomInt(0, 100);
-                        if (randomPerfect <= 50) {
-                            global.platform = 0;
-                        }
+                        global.platform = 1;
                     }
                     var dir = this.player.direction;
                     var targetPos = new cc.Vec2(this.player.node.x + jumpDistance * dir, this.player.node.y + jumpDistance * this.arrayRatio);
@@ -436,7 +448,12 @@ var Stage = /** @class */ (function (_super) {
                                         'user_id': global.settings.user_id,
                                         "changeBet": false,
                                     };
-                                    global.getSocket().emit('send-result', emit_result);
+                                    if (global.isEncrypt) {
+                                        global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                                    }
+                                    else {
+                                        global.getSocket().emit('send-result', emit_result);
+                                    }
                                 }
                                 else {
                                     global.settings.balance += _this.currBlock.trueScore;
@@ -470,7 +487,12 @@ var Stage = /** @class */ (function (_super) {
                                     'api_url': global.api_url,
                                     "changeBet": false,
                                 };
-                                global.getSocket().emit('send-result', emit_result);
+                                if (global.isEncrypt) {
+                                    global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                                }
+                                else {
+                                    global.getSocket().emit('send-result', emit_result);
+                                }
                             }
                             else {
                                 global.settings.balance += 0;
@@ -488,7 +510,7 @@ var Stage = /** @class */ (function (_super) {
         }
     };
     __decorate([
-        property(Boolean)
+        property(cc.Boolean)
     ], Stage.prototype, "autoJump", void 0);
     __decorate([
         property(Number)

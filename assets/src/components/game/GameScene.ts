@@ -19,7 +19,7 @@ export class GameScene extends cc.Component {
     @property(OverPanel)
     private overPanel:OverPanel = null;
     @property(cc.AudioClip)
-    public bgm = null;
+    public bgm:cc.AudioClip = null;
     @property(cc.Node)
     private loadingLayer: cc.Node = null;
     private  mainGame =null;

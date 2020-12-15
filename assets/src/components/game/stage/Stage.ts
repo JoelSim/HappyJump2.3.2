@@ -9,7 +9,7 @@ const { ccclass, property } = cc._decorator;
 
 @ccclass
 export class Stage extends cc.Component {
-    @property(Boolean)
+    @property(cc.Boolean)
     public autoJump: boolean = true;
 
     @property(Number)
@@ -80,7 +80,7 @@ export class Stage extends cc.Component {
         this.currBlock = block;
         this.nextBlock = block;
         this.player.node.position = this.node.parent.convertToNodeSpaceAR(this.currBlock.getCenterPosition());
-        
+
         this.addBlock();
 
         //this.addProp();
@@ -130,7 +130,7 @@ export class Stage extends cc.Component {
         }
     }
     private onJump() {
-      
+
         if(!this.autoJump){
             this.blockInputLayer.active = true;
             let jumpDistance = this.player.jumpDistance;
@@ -171,9 +171,11 @@ export class Stage extends cc.Component {
 
                             };
                             if(global.isEncrypt){
-                                emit_result = btoa(JSON.stringify(emit_result));
+                                global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
                             }
-                            global.getSocket().emit('send-result', emit_result);
+                            else{
+                                global.getSocket().emit('send-result', emit_result);
+                            }
                             this.generatingBalance = true;
                         }
                         else{
@@ -187,7 +189,7 @@ export class Stage extends cc.Component {
                     else{
                         this.insufficient.active = true;
                     }
-    
+
                 });
             } else {
                 this.player.jumpTo(targetWorldPos, () => {
@@ -210,9 +212,11 @@ export class Stage extends cc.Component {
 
                         };
                         if(global.isEncrypt){
-                            emit_result = btoa(JSON.stringify(emit_result));
+                            global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
                         }
-                        global.getSocket().emit('send-result', emit_result);
+                        else{
+                            global.getSocket().emit('send-result', emit_result);
+                        }
                         this.generatingBalance = true;
                     }
                     else{
@@ -224,8 +228,8 @@ export class Stage extends cc.Component {
                     this.timerforLoading=0;
                     this.player.node.runAction(action);
                     this.blockInputLayer.active = false;
-    
-    
+
+
                 });
             }
         }
@@ -248,7 +252,7 @@ export class Stage extends cc.Component {
         this.propLayer.addChild(propNode);
         propNode.y = position;
         // let scale = block.minScale + Math.random() * (block.maxScale - block.minScale);
-       
+
     }
 
     RandomInt(min, max){
@@ -259,7 +263,7 @@ export class Stage extends cc.Component {
         let n ;
         let blockNode ;
         if(this.currentValue>=4 &&this.currentValue<=7){
-           
+
             n = Math.floor(Math.random() * this.orangeblockList.length);
             blockNode = cc.instantiate(this.orangeblockList[n]);
         }
@@ -271,8 +275,8 @@ export class Stage extends cc.Component {
             n = Math.floor(Math.random() * this.greenblockList.length)
             blockNode = cc.instantiate(this.greenblockList[n]);
         }
-       
-       
+
+
         this.blockLayer.addChild(blockNode);
         let block = blockNode.getComponent(Block);
         let scale = block.minScale + Math.random() * (block.maxScale - block.minScale);
@@ -324,12 +328,12 @@ export class Stage extends cc.Component {
         var consoleScore;
         // calculate multiplier
         platform =   (Math.random() * (1 - 0) + 0);
-        if(platform>=0.8){
+        if(platform>=0.4){
             platform=1;
         }
         multiplierPerfect = (Math.random() * (10 - 2) + 2);
-        multiplierConso = (Math.random() * (1 - 0.2) + 0.2);
-        perfectScore = Math.round((cc.find("Canvas/InGameBetting").getComponent("InGameBetting").currentBetting * multiplierPerfect) * 10) / 10;
+        multiplierConso = 0.2;
+        perfectScore = (cc.find("Canvas/InGameBetting").getComponent("InGameBetting").currentBetting * Math.floor(multiplierPerfect));
         consoleScore = Math.round((cc.find("Canvas/InGameBetting").getComponent("InGameBetting").currentBetting  * multiplierConso) * 10) / 10;
         global.consoScore = consoleScore;
         global.perfectScore = perfectScore;
@@ -344,7 +348,7 @@ export class Stage extends cc.Component {
         if(this.timerforLoading>=2){
             this.loadingLayer.opacity=255;
         }
-        
+
         if(this.generatingBalance){
             this.timerforLoading+=dt;
             if(!global.isDemo){
@@ -364,12 +368,14 @@ export class Stage extends cc.Component {
                         "currentBetSlot":global.currentBetSlot,
 
                     }
-                    if(global.isEncrypt){
-                        emit_obj = btoa(JSON.stringify(emit_obj));
-                    }
                     cc.find("Canvas/InGameBetting").getComponent("InGameBetting").playerDie=this.playerDie;
                     if(!this.playerDie){
-                        global.getSocket().emit('changeBet', emit_obj);
+                        if(global.isEncrypt){
+                            global.getSocket().emit('changeBet', btoa(JSON.stringify(emit_obj)));
+                        }
+                        else{
+                            global.getSocket().emit('changeBet', emit_obj);
+                        }
                         this.generatingScore = true;
                     }
                     else{
@@ -391,7 +397,7 @@ export class Stage extends cc.Component {
                 }
 
             }
-          
+
         }
 
         if(this.generatingScore){
@@ -403,15 +409,15 @@ export class Stage extends cc.Component {
                     this.scheduleOnce(function(){
                         this.emitChangebet();
                     },1);
-                    
+
                 }
             }
             else{
                 this.demoGenerateScore();
                 this.emitChangebet();
-                this.generatingScore = false; 
+                this.generatingScore = false;
             }
-         
+
         }
     }
 
@@ -419,15 +425,15 @@ export class Stage extends cc.Component {
          this.updateStage(()=>{
             this.addBlock();
             cc.systemEvent.emit("Change-Bet");
-        });  
+        });
         this.loadingLayer.active = false;
         this.blockInputLayer.active = false;
         this.canJump= true;
         this.updateBalance();
-       
+
 
     }
-    
+
     private onAutoJump() {
         if(this.checkQualify()&&this.autoJump){
             if(this.canJump){
@@ -446,10 +452,7 @@ export class Stage extends cc.Component {
                     }
                    let randomPerfect = 0;
                    if(global.platform == 1 ){
-                        randomPerfect = this.RandomInt(0,100);
-                        if(randomPerfect<=50){
-                            global.platform=0;
-                        }
+                        global.platform=1;
                    }
                     let dir = this.player.direction;
                     let targetPos = new cc.Vec2(this.player.node.x + jumpDistance * dir, this.player.node.y + jumpDistance * this.arrayRatio);
@@ -485,10 +488,12 @@ export class Stage extends cc.Component {
                                         "changeBet":false,
 
                                     };
-                                    if(global.isEncrypt){
-                                        emit_result = btoa(JSON.stringify(emit_result));
+                                    if (global.isEncrypt) {
+                                        global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
                                     }
-                                    global.getSocket().emit('send-result', emit_result);
+                                    else {
+                                        global.getSocket().emit('send-result', emit_result);
+                                    }
                                 }
                                 else{
                                     global.settings.balance+=this.currBlock.trueScore;
@@ -502,8 +507,8 @@ export class Stage extends cc.Component {
                             else{
                                 this.insufficient.active = true;
                             }
-                          
-            
+
+
                         });
                     } else {
                         this.player.jumpTo(targetWorldPos, () => {
@@ -525,10 +530,12 @@ export class Stage extends cc.Component {
                                     "changeBet":false,
 
                                 };
-                                if(global.isEncrypt){
-                                    emit_result = btoa(JSON.stringify(emit_result));
+                                if (global.isEncrypt) {
+                                    global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
                                 }
-                                global.getSocket().emit('send-result', emit_result);
+                                else {
+                                    global.getSocket().emit('send-result', emit_result);
+                                }
                             }
                             else{
                                 global.settings.balance+=0;
@@ -543,9 +550,9 @@ export class Stage extends cc.Component {
                     }
 
                 },1);
-            
+
             }
         }
-        
+
     }
 }

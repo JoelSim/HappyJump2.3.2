@@ -83,7 +83,7 @@ cc.Class({
     this.maintBetOption = globalData.getBetSelection();
 
     if (this.maintBetOption == 0) {
-      this.myValue = 0.5;
+      this.myValue = 1;
     }
 
     if (this.maintBetOption == 1) {
@@ -148,6 +148,11 @@ cc.Class({
               'api_url': globalData.api_url,
               'changeBet': true
             };
+
+            if (globalData.isEncrypt) {
+              emit_result = btoa(JSON.stringify(emit_result));
+            }
+
             globalData.getSocket().emit('send-result', emit_result);
             this.generatingBalance = true;
             this.lastBetting = this.currentBetting;
@@ -173,6 +178,11 @@ cc.Class({
               "requestType": "bet",
               "currentBetSlot": globalData.currentBetSlot
             };
+
+            if (globalData.isEncrypt) {
+              emit_obj = btoa(JSON.stringify(emit_obj));
+            }
+
             globalData.getSocket().emit('changeBet', emit_obj);
             this.generateScore2();
           } else {
@@ -230,6 +240,11 @@ cc.Class({
             'api_url': globalData.api_url,
             'changeBet': true
           };
+
+          if (globalData.isEncrypt) {
+            emit_result = btoa(JSON.stringify(emit_result));
+          }
+
           globalData.getSocket().emit('send-result', emit_result);
           this.lastBetting = this.currentBetting;
           this.generatingBalance = true;
@@ -257,12 +272,20 @@ cc.Class({
     var multiplierConso;
     var platform;
     var perfectScore;
-    var consoleScore; // calculate multiplier
+    var consoleScore;
+    platform = Math.random() * (1 - 0) + 0;
 
-    platform = parseInt(Math.random() * (1 - 0) + 0);
-    multiplierPerfect = Math.random() * (1.5 - 1.1) + 1.1;
-    multiplierConso = Math.random() * (1 - 0.7) + 0.7;
-    perfectScore = Math.round(this.currentBetting * multiplierPerfect * 10) / 10;
+    if (platform >= 0.3) {
+      platform = 1;
+    } else {
+      platform = 0;
+    } // calculate multiplier
+    // platform = parseInt(Math.random() * (1 - 0) + 0);
+
+
+    multiplierPerfect = Math.random() * (10 - 2) + 2;
+    multiplierConso = 0.2;
+    perfectScore = this.currentBetting * Math.floor(multiplierPerfect);
     consoleScore = Math.round(this.currentBetting * multiplierConso * 10) / 10;
     globalData.consoScore = consoleScore;
     globalData.perfectScore = perfectScore;
@@ -290,6 +313,11 @@ cc.Class({
           'api_url': globalData.api_url,
           'changeBet': true
         };
+
+        if (globalData.isEncrypt) {
+          emit_result = btoa(JSON.stringify(emit_result));
+        }
+
         globalData.getSocket().emit('send-result', emit_result);
       }
     } else {
@@ -334,6 +362,11 @@ cc.Class({
             'ticket_id': globalData.ticket_id,
             "currentBetSlot": globalData.currentBetSlot
           };
+
+          if (globalData.isEncrypt) {
+            emit_obj = btoa(JSON.stringify(emit_obj));
+          }
+
           globalData.getSocket().emit('changeBet', emit_obj);
           this.generateScore2();
           this.generatingBalance = false;

@@ -14,9 +14,9 @@ cc.Class({
                 //cc.log(networkConfigJson.geoip_url);
                 //cc.log(networkConfigJson.api_url);
 
-                global.geoIP_UrL = networkConfigJson.geoip_url;
+                global.geoIP_url = networkConfigJson.geoip_url;
 
-                global.api_Url = networkConfigJson.api_url;
+                global.api_url = networkConfigJson.api_url;
                 // cc.log(global.SetGeoip_Url(networkConfigJson.geoip_url));
                 // cc.log(global.SetApi_Url(networkConfigJson.api_url));
             }

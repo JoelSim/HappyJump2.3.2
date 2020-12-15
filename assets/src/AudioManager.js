@@ -30,25 +30,25 @@ cc.Class({
 
         loseAudio:{
             default:null,
-            url:cc.AudioClip,
+            type:cc.AudioClip,
         },
 
         perfectAudio:{
             default:null,
-            url:cc.AudioClip,
+            type:cc.AudioClip,
         },
         consoAudio:{
             default:null,
-            url:cc.AudioClip,
+            type:cc.AudioClip,
         },
 
         uiButtonSound:{
             default:null,
-            url:cc.AudioClip,
+            type:cc.AudioClip,
         },
         winAudio:{
             default:null,
-            url:cc.AudioClip, 
+            type:cc.AudioClip, 
         },
 
         musicToggle:{

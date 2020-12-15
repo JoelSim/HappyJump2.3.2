@@ -77,7 +77,7 @@ cc.Class({
     SetAmount(even, value) {
         this.maintBetOption = globalData.getBetSelection();
         if (this.maintBetOption == 0) {
-            this.myValue = 0.5;
+            this.myValue = 1;
         }
         if (this.maintBetOption == 1) {
             this.myValue = 5;
@@ -297,11 +297,19 @@ cc.Class({
         var platform;
         var perfectScore;
         var consoleScore;
+        platform  =   (Math.random() * (1 - 0) + 0);
+        if(platform>=0.3){
+            platform = 1;
+        }
+        else{
+            platform = 0;
+        }
+
         // calculate multiplier
-        platform = parseInt(Math.random() * (1 - 0) + 0);
-        multiplierPerfect = (Math.random() * (1.5 - 1.1) + 1.1);
-        multiplierConso = (Math.random() * (1 - 0.7) + 0.7);
-        perfectScore = Math.round((this.currentBetting * multiplierPerfect) * 10) / 10;
+        // platform = parseInt(Math.random() * (1 - 0) + 0);
+        multiplierPerfect = (Math.random() * (10 - 2) +2);
+        multiplierConso = 0.2;
+        perfectScore =(this.currentBetting * Math.floor(multiplierPerfect));
         consoleScore = Math.round((this.currentBetting * multiplierConso) * 10) / 10;
         globalData.consoScore = consoleScore;
         globalData.perfectScore = perfectScore;
