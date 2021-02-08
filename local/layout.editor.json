@@ -91,7 +91,9 @@
         "assets",
         "inspector"
       ]
-    }
+    },
+    "worker": {},
+    "window-1612797646728": {}
   },
   "panels": {
     "project-settings": {
