@@ -32,6 +32,7 @@ require('./assets/src/PropItem');
 require('./assets/src/ScoreMoving');
 require('./assets/src/SettingManager');
 require('./assets/src/StartScene');
+require('./assets/src/TutorialManager');
 require('./assets/src/backgroundImage');
 require('./assets/src/components/game/GameScene');
 require('./assets/src/components/game/OverPanel');
