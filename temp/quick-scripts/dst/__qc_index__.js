@@ -28,6 +28,7 @@ require('./assets/src/Network/Encrypt');
 require('./assets/src/Network/Socket');
 require('./assets/src/Network/ecrypt_New');
 require('./assets/src/NewBetSelection');
+require('./assets/src/PortraitPrompt');
 require('./assets/src/PropItem');
 require('./assets/src/ScoreMoving');
 require('./assets/src/SettingManager');

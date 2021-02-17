@@ -21,7 +21,7 @@ exports.setEffectVolume = setEffectVolume;
 exports.getEffectVolume = getEffectVolume;
 exports.setRotateVolume = setRotateVolume;
 exports.getRotateVolume = getRotateVolume;
-exports.currentBetSlot = exports.api_url = exports.geoIP_url = exports.winMultiplier = exports.isEncrypt = exports.errorMessage = exports.ticket_id = exports.game_code = exports.settings = exports.isfullScreen = exports.access_token = exports.host_id = exports.finishGeneratingBalance = exports.finishGetData = exports.perfectScore = exports.consoScore = exports.platform = exports.currentBet = exports.isDemo = exports.isProduction = void 0;
+exports.currentBetSlot = exports.api_url = exports.geoIP_url = exports.winMultiplier = exports.firstPrompt = exports.isEncrypt = exports.errorMessage = exports.ticket_id = exports.game_code = exports.settings = exports.isfullScreen = exports.access_token = exports.host_id = exports.finishGeneratingBalance = exports.finishGetData = exports.perfectScore = exports.consoScore = exports.platform = exports.currentBet = exports.isDemo = exports.isProduction = void 0;
 var betSelection = 0;
 var sound = 1;
 var effect_volume = 1;
@@ -90,6 +90,8 @@ var errorMessage = "";
 exports.errorMessage = errorMessage;
 var isEncrypt = true;
 exports.isEncrypt = isEncrypt;
+var firstPrompt = false;
+exports.firstPrompt = firstPrompt;
 var winMultiplier = [40, 38, 36, 34, 32];
 exports.winMultiplier = winMultiplier;
 

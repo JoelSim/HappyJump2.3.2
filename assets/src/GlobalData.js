@@ -49,6 +49,7 @@ export var ticket_id = -1;
 
 export var errorMessage = "";
 export var isEncrypt = true;
+export var firstPrompt = false;
 
 export var winMultiplier = [40,38,36,34,32];
 export function getMultiplier(){
