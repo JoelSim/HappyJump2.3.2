@@ -20,9 +20,9 @@
                     "children": [
                       "scene"
                     ],
-                    "height": 491.4375,
+                    "height": 490.984375,
                     "type": "panel",
-                    "width": 1307.96875
+                    "width": 1307.984375
                   },
                   {
                     "active": 1,
@@ -30,14 +30,14 @@
                       "node-library",
                       "hierarchy"
                     ],
-                    "height": 491.4375,
+                    "height": 490.984375,
                     "type": "panel",
-                    "width": 285.59375
+                    "width": 286
                   }
                 ],
-                "height": 491.4375,
+                "height": 490.984375,
                 "type": "dock-h",
-                "width": 1596.5625
+                "width": 1597
               },
               {
                 "children": [
@@ -47,28 +47,28 @@
                       "console",
                       "timeline"
                     ],
-                    "height": 427.546875,
+                    "height": 428,
                     "type": "panel",
-                    "width": 1374.390625
+                    "width": 1373.984375
                   },
                   {
                     "active": 0,
                     "children": [
                       "assets"
                     ],
-                    "height": 427.546875,
+                    "height": 428,
                     "type": "panel",
-                    "width": 219.15625
+                    "width": 220
                   }
                 ],
-                "height": 427.546875,
+                "height": 428,
                 "type": "dock-h",
-                "width": 1596.5625
+                "width": 1597
               }
             ],
             "height": 922,
             "type": "dock-v",
-            "width": 1596.5625
+            "width": 1597
           },
           {
             "active": 0,
@@ -77,7 +77,7 @@
             ],
             "height": 922,
             "type": "panel",
-            "width": 304.4375
+            "width": 304
           }
         ],
         "type": "dock-h"
@@ -92,7 +92,8 @@
         "inspector"
       ]
     },
-    "worker": {}
+    "worker": {},
+    "window-1613563894788": {}
   },
   "panels": {
     "project-settings": {
