@@ -23,6 +23,12 @@ export class GameScene extends cc.Component {
     @property(cc.Node)
     private loadingLayer: cc.Node = null;
     private  mainGame =null;
+
+    @property(cc.Label)
+    message = null;
+    @property(cc.Node)
+    prompt = null;
+
     onLoad(){
         if(cc.sys.isMobile) {
             cc.find("Canvas").getComponent(cc.Canvas).fitHeight = false;
@@ -85,5 +91,18 @@ export class GameScene extends cc.Component {
         G.off(PlayerJumpSuccessEvent.NAME,this.onPlayerJumpSuccess,this);
     }
 
+    update (dt) {
+        if(global.isKicked){
+            this.message.string = global.kickMessage;
+            this.prompt.active = true;
+		}
+    }
 
+    blankScreen(){
+        if (global.settings.lobby_url != null && global.settings.lobby_url != "") {
+            window.open(global.settings.lobby_url, "_self");
+        } else {
+            window.open("about:blank", "_self");
+        }
+    }
 }

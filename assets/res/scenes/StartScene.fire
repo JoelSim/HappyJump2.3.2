@@ -255,7 +255,7 @@
       "array": [
         0,
         0,
-        386.24270902007055,
+        387.1087240627165,
         0,
         0,
         0,
@@ -6888,8 +6888,8 @@
       }
     ],
     "_useOriginalSize": false,
-    "_string": "v1.2.2",
-    "_N$string": "v1.2.2",
+    "_string": "v1.2.3",
+    "_N$string": "v1.2.3",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
@@ -7878,7 +7878,11 @@
       "__id__": 177
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -7968,7 +7972,11 @@
       "__id__": 179
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "Label",
     "_N$string": "Label",
@@ -8129,7 +8137,11 @@
       "__id__": 182
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "Ok",
     "_N$string": "Ok",
@@ -8159,7 +8171,11 @@
       "__id__": 181
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -8270,8 +8286,8 @@
     "target": {
       "__id__": 2
     },
-    "component": "API",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "74d1a+wziRMxaNOftsXDqxA",
     "handler": "startGuestMode",
     "customEventData": ""
   },
@@ -8555,8 +8571,8 @@
     "target": {
       "__id__": 2
     },
-    "component": "StartScene",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "9a98da22QxGVrT4WQx6TGck",
     "handler": "blankScreen",
     "customEventData": ""
   },
@@ -8718,7 +8734,11 @@
       "__id__": 195
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -8808,7 +8828,11 @@
       "__id__": 197
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "Are You Sure To Exit Game?",
     "_N$string": "Are You Sure To Exit Game?",
@@ -8969,7 +8993,11 @@
       "__id__": 200
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "Yes",
     "_N$string": "Yes",
@@ -8999,7 +9027,11 @@
       "__id__": 199
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -9539,7 +9571,11 @@
       "__id__": 212
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_useOriginalSize": false,
     "_string": "No",
     "_N$string": "No",
@@ -9569,7 +9605,11 @@
       "__id__": 211
     },
     "_enabled": true,
-    "_materials": [],
+    "_materials": [
+      {
+        "__uuid__": "eca5d2f2-8ef6-41c2-bbe6-f9c79d09c432"
+      }
+    ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
@@ -12390,6 +12430,20 @@
     "sureToExit": {
       "__id__": 194
     },
+    "message": {
+      "__id__": 180
+    },
+    "prompt": {
+      "__id__": 176
+    },
+    "errorButtons": [
+      {
+        "__id__": 181
+      },
+      {
+        "__id__": 187
+      }
+    ],
     "_id": "d8240YTdFM+o7OaCadkUrf"
   },
   {

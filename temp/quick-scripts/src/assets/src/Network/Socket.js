@@ -164,18 +164,9 @@ cc.Class({
       cc.log(resp); // self.getComponent("uiController").showErrorMessage(commonErrorMessage[URL.lang][resp.status_code], true);
     });
     global.getSocket().on('kick-user', function (data) {
-      cc.log("kick-User"); // var resp = data;
-
-      data = self.parseDataFormat(data);
-      var resp = ecrypt.decrypt(data);
-      resp = self.parseDataFormat(resp);
-
-      if (commonErrorMessage[URL.lang][resp.status_code] != null) {// self.getComponent("uiController").showErrorMessage(commonErrorMessage[URL.lang][resp.status_code], true);
-      }
-
-      if (resp.status_code == "1028") {
-        global.getSocket().disconnect();
-      }
+      data = self.socketReceiveAction(data);
+      global.isKicked = true;
+      global.kickMessage = data.message;
     });
   },
   removeEventListener: function removeEventListener() {

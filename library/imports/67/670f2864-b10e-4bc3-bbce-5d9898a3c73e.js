@@ -28,6 +28,7 @@ var G_1 = require("../../G");
 var Stage_1 = require("./stage/Stage");
 var PlayerDieEvent_1 = require("../../events/PlayerDieEvent");
 var PlayerJumpSuccessEvent_1 = require("../../events/PlayerJumpSuccessEvent");
+var global = require("../../GlobalData");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var GameScene = /** @class */ (function (_super) {
     __extends(GameScene, _super);
@@ -40,6 +41,8 @@ var GameScene = /** @class */ (function (_super) {
         _this.bgm = null;
         _this.loadingLayer = null;
         _this.mainGame = null;
+        _this.message = null;
+        _this.prompt = null;
         return _this;
     }
     GameScene.prototype.onLoad = function () {
@@ -95,6 +98,20 @@ var GameScene = /** @class */ (function (_super) {
         G_1.G.off(PlayerDieEvent_1.PlayerDieEvent.NAME, this.onOver, this);
         G_1.G.off(PlayerJumpSuccessEvent_1.PlayerJumpSuccessEvent.NAME, this.onPlayerJumpSuccess, this);
     };
+    GameScene.prototype.update = function (dt) {
+        if (global.isKicked) {
+            this.message.string = global.kickMessage;
+            this.prompt.active = true;
+        }
+    };
+    GameScene.prototype.blankScreen = function () {
+        if (global.settings.lobby_url != null && global.settings.lobby_url != "") {
+            window.open(global.settings.lobby_url, "_self");
+        }
+        else {
+            window.open("about:blank", "_self");
+        }
+    };
     __decorate([
         property(Stage_1.Stage)
     ], GameScene.prototype, "stage", void 0);
@@ -110,6 +127,12 @@ var GameScene = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], GameScene.prototype, "loadingLayer", void 0);
+    __decorate([
+        property(cc.Label)
+    ], GameScene.prototype, "message", void 0);
+    __decorate([
+        property(cc.Node)
+    ], GameScene.prototype, "prompt", void 0);
     GameScene = __decorate([
         ccclass
     ], GameScene);

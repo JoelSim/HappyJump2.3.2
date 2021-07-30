@@ -58,6 +58,18 @@ cc.Class({
     sureToExit: {
       "default": null,
       type: cc.Node
+    },
+    message: {
+      "default": null,
+      type: cc.Label
+    },
+    prompt: {
+      "default": null,
+      type: cc.Node
+    },
+    errorButtons: {
+      "default": [],
+      type: [cc.Node]
     }
   },
   // LIFE-CYCLE CALLBACKS:
@@ -128,7 +140,14 @@ cc.Class({
       globalData.setEffectVolume(0);
     }
   },
-  update: function update(dt) {}
+  update: function update(dt) {
+    if (globalData.isKicked) {
+      this.errorButtons[0].active = false;
+      this.errorButtons[1].active = true;
+      this.message.string = globalData.kickMessage;
+      this.prompt.active = true;
+    }
+  }
 });
 
 cc._RF.pop();
