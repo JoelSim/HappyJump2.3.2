@@ -8,6 +8,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 
 var ecryptContoller = _interopRequireWildcard(require("ecrypt_New"));
 
+var constant = _interopRequireWildcard(require("Constant"));
+
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
@@ -25,7 +27,8 @@ cc.Class({
         //cc.log(networkConfigJson.api_url);
 
         global.geoIP_url = networkConfigJson.geoip_url;
-        global.api_url = networkConfigJson.api_url; // cc.log(global.SetGeoip_Url(networkConfigJson.geoip_url));
+        global.api_url = networkConfigJson.api_url;
+        constant.socketURL = constant.prodSocketURL; // cc.log(global.SetGeoip_Url(networkConfigJson.geoip_url));
         // cc.log(global.SetApi_Url(networkConfigJson.api_url));
       }
     }

@@ -22,15 +22,19 @@ exports.getGameVersion = getGameVersion;
 exports.getSocketURL = getSocketURL;
 exports.getApiURL = getApiURL;
 exports.getGameCode = getGameCode;
+exports.prodSocketURL = exports.socketURL = void 0;
 // var socketURL = "192.168.100.6:8099";
 // var socketURL = "slot-grabber.casinoville.net"
-var socketURL = "https://st-socket-dsocial.slot28.com"; // export var gameSocketURL = "socket-dsocial.velachip.com/game";
+var socketURL = "https://st-socket-dsocial.slot28.com";
+exports.socketURL = socketURL;
+var prodSocketURL = "https://socket-dsocial.slot28.com"; // export var gameSocketURL = "socket-dsocial.velachip.com/game";
 // export var gameSocketURL = "https://st-socket-dsocial.slot28.com/game";
 // var socketURL = "localhost:9000";
 // export var gameSocketURL = "localhost:7777/game";
 // var socketURL = "192.168.100.45:8098";
 // var apiURL = "http://bo.fun1881.com/api/user/";
 
+exports.prodSocketURL = prodSocketURL;
 var apiURL = "http://bo-stage.velachip.com/api/mini-game/";
 var loginURL = "http://bo-stage.velachip.com/api/user/login";
 var prizeListURL = "http://bo-stage.velachip.com/api/berchinko/list";
@@ -81,7 +85,7 @@ function setGameCode(value) {
 }
 
 function setSocketURL(value) {
-  socketURL = value;
+  exports.socketURL = socketURL = value;
   return socketURL;
 }
 

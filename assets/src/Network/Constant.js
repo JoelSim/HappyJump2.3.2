@@ -1,6 +1,7 @@
 // var socketURL = "192.168.100.6:8099";
 // var socketURL = "slot-grabber.casinoville.net"
-var socketURL = "https://st-socket-dsocial.slot28.com";
+export var socketURL = "https://st-socket-dsocial.slot28.com";
+export var prodSocketURL = "https://socket-dsocial.slot28.com";
 // export var gameSocketURL = "socket-dsocial.velachip.com/game";
 // export var gameSocketURL = "https://st-socket-dsocial.slot28.com/game";
 
