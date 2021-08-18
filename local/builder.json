@@ -1,7 +1,7 @@
 {
   "platform": "web-mobile",
   "template": "link",
-  "buildPath": "C:\\Users\\Ong\\Desktop\\Build\\HappyJump(dsg-004)",
+  "buildPath": "build/web-mobile",
   "debug": false,
   "sourceMaps": false,
   "includeEruda": false,
