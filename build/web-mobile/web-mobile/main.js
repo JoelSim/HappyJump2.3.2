@@ -1,3 +1,4 @@
+document.title = "Happy Jump";
 window.boot = function () {
     var settings = window._CCSettings;
     window._CCSettings = undefined;

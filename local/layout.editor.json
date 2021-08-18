@@ -20,9 +20,9 @@
                     "children": [
                       "scene"
                     ],
-                    "height": 499.984375,
+                    "height": 490.984375,
                     "type": "panel",
-                    "width": 1319
+                    "width": 1307.984375
                   },
                   {
                     "active": 1,
@@ -30,14 +30,14 @@
                       "node-library",
                       "hierarchy"
                     ],
-                    "height": 499.984375,
+                    "height": 490.984375,
                     "type": "panel",
-                    "width": 288
+                    "width": 286
                   }
                 ],
-                "height": 499.984375,
+                "height": 490.984375,
                 "type": "dock-h",
-                "width": 1610
+                "width": 1597
               },
               {
                 "children": [
@@ -47,37 +47,37 @@
                       "console",
                       "timeline"
                     ],
-                    "height": 435,
+                    "height": 428,
                     "type": "panel",
-                    "width": 999
+                    "width": 991
                   },
                   {
                     "active": 0,
                     "children": [
                       "assets"
                     ],
-                    "height": 435,
+                    "height": 428,
                     "type": "panel",
-                    "width": 608
+                    "width": 603
                   }
                 ],
-                "height": 435,
+                "height": 428,
                 "type": "dock-h",
-                "width": 1610
+                "width": 1597
               }
             ],
-            "height": 938,
+            "height": 922,
             "type": "dock-v",
-            "width": 1610
+            "width": 1597
           },
           {
             "active": 0,
             "children": [
               "inspector"
             ],
-            "height": 938,
+            "height": 922,
             "type": "panel",
-            "width": 307
+            "width": 304
           }
         ],
         "type": "dock-h"
@@ -91,8 +91,7 @@
         "assets",
         "inspector"
       ]
-    },
-    "worker": {}
+    }
   },
   "panels": {
     "project-settings": {
