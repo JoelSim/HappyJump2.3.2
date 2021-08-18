@@ -1,6 +1,7 @@
 import * as global from "GlobalData";
 import * as constant from "Constant";
 import * as ecrypt from "Encrypt";
+import * as ecryptContoller from 'ecrypt_New';
 
 cc.Class({
     extends: cc.Component,
@@ -51,6 +52,23 @@ cc.Class({
 		this.betScene.getComponent("StartScene").updateCreditLabel();
 	},
     getSettings(){
+		if(window.endPointConfig != null){
+            var networkConfig = ecryptContoller.decrypt(window.endPointConfig);
+            if(networkConfig != null){
+                var networkConfigJson = JSON.parse(networkConfig);
+
+                //cc.log(networkConfigJson.geoip_url);
+                //cc.log(networkConfigJson.api_url);
+
+                global.geoIP_url = networkConfigJson.geoip_url;
+                global.api_url = networkConfigJson.api_url;
+                constant.socketURL = constant.prodSocketURL;
+
+                // cc.log(global.SetGeoip_Url(networkConfigJson.geoip_url));
+                // cc.log(global.SetApi_Url(networkConfigJson.api_url));
+            }
+        }
+
 		global.host_id = this.getParameterByName('host_id');
 		global.access_token = this.getParameterByName('access_token');
 		let xhr = new XMLHttpRequest();

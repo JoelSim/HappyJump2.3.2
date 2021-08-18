@@ -6,8 +6,6 @@ cc._RF.push(module, '38f7cig6B9PpbijkJxqKnw1', 'API_NEW ');
 
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-var ecryptContoller = _interopRequireWildcard(require("ecrypt_New"));
-
 var constant = _interopRequireWildcard(require("Constant"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
@@ -18,21 +16,7 @@ var global = require("GlobalData");
 
 cc.Class({
   "extends": cc.Component,
-  onLoad: function onLoad() {
-    if (window.endPointConfig != null) {
-      var networkConfig = ecryptContoller.decrypt(window.endPointConfig);
-
-      if (networkConfig != null) {
-        var networkConfigJson = JSON.parse(networkConfig); //cc.log(networkConfigJson.geoip_url);
-        //cc.log(networkConfigJson.api_url);
-
-        global.geoIP_url = networkConfigJson.geoip_url;
-        global.api_url = networkConfigJson.api_url;
-        constant.socketURL = constant.prodSocketURL; // cc.log(global.SetGeoip_Url(networkConfigJson.geoip_url));
-        // cc.log(global.SetApi_Url(networkConfigJson.api_url));
-      }
-    }
-  }
+  onLoad: function onLoad() {}
 });
 
 cc._RF.pop();
