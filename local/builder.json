@@ -1,7 +1,7 @@
 {
   "platform": "web-mobile",
   "template": "link",
-  "buildPath": "build/web-mobile",
+  "buildPath": "./build",
   "debug": false,
   "sourceMaps": false,
   "includeEruda": false,

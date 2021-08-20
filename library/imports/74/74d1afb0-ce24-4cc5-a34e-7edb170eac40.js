@@ -66,8 +66,7 @@ cc.Class({
         //cc.log(networkConfigJson.api_url);
 
         global.geoIP_url = networkConfigJson.geoip_url;
-        global.api_url = networkConfigJson.api_url;
-        constant.socketURL = constant.prodSocketURL; // cc.log(global.SetGeoip_Url(networkConfigJson.geoip_url));
+        global.api_url = networkConfigJson.api_url; // cc.log(global.SetGeoip_Url(networkConfigJson.geoip_url));
         // cc.log(global.SetApi_Url(networkConfigJson.api_url));
       }
     }
@@ -87,6 +86,11 @@ cc.Class({
             var response = xhr.responseText;
             var parsed = JSON.parse(response);
             global.settings = parsed.data;
+            constant.socketURL = global.settings.socket_url;
+
+            if (!global.getSocket()) {
+              self.getComponent("Socket").connectSocket();
+            }
           }
         };
       } else {
@@ -122,8 +126,13 @@ cc.Class({
         if (xhr.readyState == 4 && xhr.status >= 200 && xhr.status < 400) {
           var response = xhr.responseText;
           var parsed = JSON.parse(response);
-          global.settings = parsed.data; // global.setSettings(parsed.data);
-          //global.balance = global.settings.balance;
+          global.settings = parsed.data;
+          constant.socketURL = global.settings.socket_url;
+
+          if (!global.getSocket()) {
+            self.getComponent("Socket").connectSocket();
+          } //global.balance = global.settings.balance;
+
 
           if (global.settings == undefined) {
             self.errorLayer.active = true;

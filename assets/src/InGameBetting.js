@@ -57,9 +57,6 @@ cc.Class({
 
     onLoad() {
         this.selectedBetOption = globalData.currentBet;
-        if (!globalData.getSocket()) {
-            this.getComponent("Socket").connectSocket();
-        }
         this.SetAmount(1);
     },
 

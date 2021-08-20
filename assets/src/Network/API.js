@@ -62,7 +62,6 @@ cc.Class({
 
                 global.geoIP_url = networkConfigJson.geoip_url;
                 global.api_url = networkConfigJson.api_url;
-                constant.socketURL = constant.prodSocketURL;
 
                 // cc.log(global.SetGeoip_Url(networkConfigJson.geoip_url));
                 // cc.log(global.SetApi_Url(networkConfigJson.api_url));
@@ -84,7 +83,10 @@ cc.Class({
 						var parsed = JSON.parse(response);
 		
 						global.settings = parsed.data;
-					
+						constant.socketURL = global.settings.socket_url;
+						if(!global.getSocket()){
+							self.getComponent("Socket").connectSocket();
+						}
 					}
 				
 				};
@@ -128,7 +130,10 @@ cc.Class({
 					var parsed = JSON.parse(response);
 	
 					global.settings = parsed.data;
-					// global.setSettings(parsed.data);
+					constant.socketURL = global.settings.socket_url;
+					if(!global.getSocket()){
+						self.getComponent("Socket").connectSocket();
+					}
 	
 					
 					//global.balance = global.settings.balance;

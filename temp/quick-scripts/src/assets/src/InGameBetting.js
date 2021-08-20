@@ -63,11 +63,6 @@ cc.Class({
   // LIFE-CYCLE CALLBACKS:
   onLoad: function onLoad() {
     this.selectedBetOption = globalData.currentBet;
-
-    if (!globalData.getSocket()) {
-      this.getComponent("Socket").connectSocket();
-    }
-
     this.SetAmount(1);
   },
   hide: function hide() {

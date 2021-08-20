@@ -83,11 +83,6 @@ cc.Class({
     this.api = this.node.getComponent("API");
     this.api.getSettings();
     this.loadingLayer.active = true;
-
-    if (!globalData.getSocket()) {
-      this.getComponent("Socket").connectSocket();
-    }
-
     var isIOS14Device = cc.sys.os === cc.sys.OS_IOS && cc.sys.isBrowser && cc.sys.isMobile && /iPhone OS 14/.test(window.navigator.userAgent);
 
     if (isIOS14Device) {
