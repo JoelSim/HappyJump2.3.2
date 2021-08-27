@@ -12,7 +12,7 @@ var constant = _interopRequireWildcard(require("Constant"));
 
 var ecrypt = _interopRequireWildcard(require("Encrypt"));
 
-var ecryptContoller = _interopRequireWildcard(require("ecrypt_New"));
+var ecryptContoller = _interopRequireWildcard(require("ecrypt"));
 
 function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function _getRequireWildcardCache() { return cache; }; return cache; }
 

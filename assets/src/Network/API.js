@@ -1,7 +1,7 @@
 import * as global from "GlobalData";
 import * as constant from "Constant";
 import * as ecrypt from "Encrypt";
-import * as ecryptContoller from 'ecrypt_New';
+import * as ecryptContoller from 'ecrypt';
 
 cc.Class({
     extends: cc.Component,

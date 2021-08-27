@@ -26,6 +26,7 @@ require('./assets/src/Network/API_NEW ');
 require('./assets/src/Network/Constant');
 require('./assets/src/Network/Encrypt');
 require('./assets/src/Network/Socket');
+require('./assets/src/Network/ecrypt');
 require('./assets/src/Network/ecrypt_New');
 require('./assets/src/NewBetSelection');
 require('./assets/src/PortraitPrompt');
