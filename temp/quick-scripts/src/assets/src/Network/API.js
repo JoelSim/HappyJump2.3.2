@@ -86,7 +86,7 @@ cc.Class({
             var response = xhr.responseText;
             var parsed = JSON.parse(response);
             global.settings = parsed.data;
-            constant.socketURL = global.settings.socket_url;
+            constant.setSocketURL(global.settings.socket_url);
 
             if (!global.getSocket()) {
               self.getComponent("Socket").connectSocket();
@@ -127,7 +127,7 @@ cc.Class({
           var response = xhr.responseText;
           var parsed = JSON.parse(response);
           global.settings = parsed.data;
-          constant.socketURL = global.settings.socket_url;
+          constant.setSocketURL(global.settings.socket_url);
 
           if (!global.getSocket()) {
             self.getComponent("Socket").connectSocket();
