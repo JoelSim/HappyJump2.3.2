@@ -4,9 +4,7 @@ cc._RF.push(module, 'd012asB0i5IPoYt5D2ZBNAR', 'GlobalData');
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.getSocket = getSocket;
 exports.setSocket = setSocket;
 exports.getMultiplier = getMultiplier;

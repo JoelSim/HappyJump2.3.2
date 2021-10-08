@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "42059f2f-5e75-48a0-83fa-591a8622ded9",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "TotalWin_ReplayButton": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "fe0987b8-ed96-48e0-9fe0-8124d34b03a1",
+      "importer": "sprite-frame",
       "rawTextureUuid": "42059f2f-5e75-48a0-83fa-591a8622ded9",
       "trimType": "auto",
       "trimThreshold": 1,

@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "a044be1b-b541-420e-8cf5-c938ccf13cab",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "5-Cactus": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "c4e0ee1f-40e4-43c1-9315-aa846232368f",
+      "importer": "sprite-frame",
       "rawTextureUuid": "a044be1b-b541-420e-8cf5-c938ccf13cab",
       "trimType": "auto",
       "trimThreshold": 1,

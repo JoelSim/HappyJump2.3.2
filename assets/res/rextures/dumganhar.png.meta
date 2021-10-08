@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "b85c4386-81cc-4691-9621-5062d1fb88fe",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "dumganhar": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "2ca99182-c0c3-442f-8662-45b254a0ae8a",
+      "importer": "sprite-frame",
       "rawTextureUuid": "b85c4386-81cc-4691-9621-5062d1fb88fe",
       "trimType": "auto",
       "trimThreshold": 1,

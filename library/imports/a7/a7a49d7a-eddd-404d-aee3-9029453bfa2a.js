@@ -4,9 +4,7 @@ cc._RF.push(module, 'a7a49167d1ATa7jkClFO/oq', 'Constant');
 
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+exports.__esModule = true;
 exports.getForgetPassURL = getForgetPassURL;
 exports.getSignUpURL = getSignUpURL;
 exports.getLobbyAPI = getLobbyAPI;

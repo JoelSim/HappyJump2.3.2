@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "d90514ab-2633-462c-987f-42639b7d863d",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "BetAmount_DefaultOrange": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "8f7cd55e-1f44-4e21-b361-7b1c7a3e270a",
+      "importer": "sprite-frame",
       "rawTextureUuid": "d90514ab-2633-462c-987f-42639b7d863d",
       "trimType": "auto",
       "trimThreshold": 1,

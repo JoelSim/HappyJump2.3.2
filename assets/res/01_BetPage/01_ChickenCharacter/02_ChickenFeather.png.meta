@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "b0223a06-d3fb-44e8-82e5-ad8029d0c862",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "02_ChickenFeather": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "63dead48-90f7-4159-afb3-c30194bf5dd0",
+      "importer": "sprite-frame",
       "rawTextureUuid": "b0223a06-d3fb-44e8-82e5-ad8029d0c862",
       "trimType": "auto",
       "trimThreshold": 1,

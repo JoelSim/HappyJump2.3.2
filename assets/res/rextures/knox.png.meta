@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "381766da-a2fe-4d89-9c7c-ab0af4360152",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "knox": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "50564a87-7355-4279-bd34-8c4e68948a30",
+      "importer": "sprite-frame",
       "rawTextureUuid": "381766da-a2fe-4d89-9c7c-ab0af4360152",
       "trimType": "auto",
       "trimThreshold": 1,

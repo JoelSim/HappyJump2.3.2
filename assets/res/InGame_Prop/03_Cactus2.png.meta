@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "cad9447d-8247-45ce-899f-982726beb708",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "03_Cactus2": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "4ff778a0-74dd-4bfe-b25f-3151d8d60b38",
+      "importer": "sprite-frame",
       "rawTextureUuid": "cad9447d-8247-45ce-899f-982726beb708",
       "trimType": "auto",
       "trimThreshold": 1,

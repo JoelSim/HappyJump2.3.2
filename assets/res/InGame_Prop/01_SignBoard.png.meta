@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "de693137-8783-455d-9747-f6d06b976d41",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "01_SignBoard": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "584c64ab-d55b-41ae-ad78-5030d4c35993",
+      "importer": "sprite-frame",
       "rawTextureUuid": "de693137-8783-455d-9747-f6d06b976d41",
       "trimType": "auto",
       "trimThreshold": 1,

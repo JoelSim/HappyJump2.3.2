@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "c68f6c21-ac69-42e0-8927-b4293d4ea103",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "WinAmount_Bar": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "8714ef31-2e61-42f8-8d32-928f71433934",
+      "importer": "sprite-frame",
       "rawTextureUuid": "c68f6c21-ac69-42e0-8927-b4293d4ea103",
       "trimType": "auto",
       "trimThreshold": 1,

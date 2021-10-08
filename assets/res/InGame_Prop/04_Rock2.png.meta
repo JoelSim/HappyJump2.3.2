@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "de25ab73-9319-45b1-8d54-aa23f8b0c8bc",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "04_Rock2": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "b21df928-459b-4ac9-b65d-714fd5d4c24f",
+      "importer": "sprite-frame",
       "rawTextureUuid": "de25ab73-9319-45b1-8d54-aa23f8b0c8bc",
       "trimType": "auto",
       "trimThreshold": 1,

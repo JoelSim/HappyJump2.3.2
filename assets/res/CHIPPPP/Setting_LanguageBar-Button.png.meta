@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "eeaea80c-166f-49fe-a7b2-a4f82cf53d0f",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "Setting_LanguageBar-Button": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "c849fc38-c90a-4e92-ab87-ad7df86d8586",
+      "importer": "sprite-frame",
       "rawTextureUuid": "eeaea80c-166f-49fe-a7b2-a4f82cf53d0f",
       "trimType": "auto",
       "trimThreshold": 1,

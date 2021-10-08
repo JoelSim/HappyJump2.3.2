@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "c3a914af-24c0-4d79-aad8-2e0cbeba307d",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "ChickenAnimation_Click_Hold_02": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "5fa122e8-7f32-4f13-85b0-f1d752ee7bad",
+      "importer": "sprite-frame",
       "rawTextureUuid": "c3a914af-24c0-4d79-aad8-2e0cbeba307d",
       "trimType": "custom",
       "trimThreshold": 1,

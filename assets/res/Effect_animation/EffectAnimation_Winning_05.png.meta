@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "2260e29f-dcc4-4b4b-9169-56d1042b5cee",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "EffectAnimation_Winning_05": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "3f086048-775e-4740-a106-bf54459bce2e",
+      "importer": "sprite-frame",
       "rawTextureUuid": "2260e29f-dcc4-4b4b-9169-56d1042b5cee",
       "trimType": "custom",
       "trimThreshold": 1,

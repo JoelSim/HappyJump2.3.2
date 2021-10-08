@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "c3aab3ee-7452-465d-ba5c-a1572d86b0be",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "BalanceAmount_Bar": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "d86bd93b-ab29-4839-899f-aee145c15c1c",
+      "importer": "sprite-frame",
       "rawTextureUuid": "c3aab3ee-7452-465d-ba5c-a1572d86b0be",
       "trimType": "auto",
       "trimThreshold": 1,

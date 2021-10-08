@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "88f5ffa5-6edc-4d1b-bb8e-1999839edb98",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "Autoplay-Logo": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "1911f89a-d932-4295-bf29-f14b4c28ae54",
+      "importer": "sprite-frame",
       "rawTextureUuid": "88f5ffa5-6edc-4d1b-bb8e-1999839edb98",
       "trimType": "auto",
       "trimThreshold": 1,

@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "43731fad-2e9d-4669-a3e7-96faafe56c9e",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "ChickenCharacterAnimation_036": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "f2291666-1a6d-48f8-bdd3-3ee96db172ef",
+      "importer": "sprite-frame",
       "rawTextureUuid": "43731fad-2e9d-4669-a3e7-96faafe56c9e",
       "trimType": "custom",
       "trimThreshold": 1,

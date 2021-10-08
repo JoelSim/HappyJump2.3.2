@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "5ed7f881-676d-4dc6-96c6-61e9f3f9b1b3",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "BetPage_choose-your-bet- range": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "cc64b7f2-d9c4-4e2e-8a9e-765387166b3c",
+      "importer": "sprite-frame",
       "rawTextureUuid": "5ed7f881-676d-4dc6-96c6-61e9f3f9b1b3",
       "trimType": "auto",
       "trimThreshold": 1,

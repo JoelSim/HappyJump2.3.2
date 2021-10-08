@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "cb0081fd-310a-44f1-adf1-352a8c8abb76",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "01_Grass2": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "61ac5dcb-aab0-4fc7-a278-056cbef1de0d",
+      "importer": "sprite-frame",
       "rawTextureUuid": "cb0081fd-310a-44f1-adf1-352a8c8abb76",
       "trimType": "auto",
       "trimThreshold": 1,

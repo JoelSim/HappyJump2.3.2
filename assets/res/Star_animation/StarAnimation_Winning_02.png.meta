@@ -1,6 +1,7 @@
 {
-  "ver": "2.3.4",
+  "ver": "2.3.7",
   "uuid": "e9006032-bb0a-4f68-885a-908ab6485146",
+  "importer": "texture",
   "type": "sprite",
   "wrapMode": "clamp",
   "filterMode": "bilinear",
@@ -12,8 +13,9 @@
   "platformSettings": {},
   "subMetas": {
     "StarAnimation_Winning_02": {
-      "ver": "1.0.4",
+      "ver": "1.0.6",
       "uuid": "d3df0eab-9234-43e2-a2b5-1eaf57582e42",
+      "importer": "sprite-frame",
       "rawTextureUuid": "e9006032-bb0a-4f68-885a-908ab6485146",
       "trimType": "custom",
       "trimThreshold": 1,

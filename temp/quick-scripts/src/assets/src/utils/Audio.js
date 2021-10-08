@@ -4,6 +4,7 @@ cc._RF.push(module, '24e7cfQDDVFqabBZJ1IKhQg', 'Audio');
 
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Audio = void 0;
 var Audio = /** @class */ (function () {
     function Audio() {
         this.bgmVolume = 1.0;
