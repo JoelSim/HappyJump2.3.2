@@ -1,6 +1,7 @@
 import * as global from "GlobalData";
 import * as constant from "Constant";
-import * as ecrypt from "Encrypt";
+import * as ecrypt from "ecrypt";
+var MobileDetect = require('mobile-detect');
 
 cc.Class({
     extends: cc.Component,
@@ -21,28 +22,18 @@ cc.Class({
     // use this for initialization
     //mg2020
     onLoad: function () {
-        // if(URL.lang != null){
-        //     if(URL.lang == "en" || URL.lang == "ch" || URL.lang == "tw" ){
-        //         global.setLang(URL.lang);
-        //     }else{
-        //         global.setLang("en");
-        //         URL.lang = "en";
-        //     }
-        // }else{
-        //     global.setLang("en");
-        //     URL.lang = "en";
-        // }
+        this.mobileDetect = new MobileDetect(window.navigator.userAgent);
     },
 
     //#region Encryption
     decode(data){
         // convert from base64 and return object in string
-        return atob(data);
+        return ecrypt.decrypt(data);
     },
 
     encode(data){
         // convert string object to base64 string and return the string
-        return btoa(data);
+        return ecrypt.encrypt(data);
     },
 
     socketReceiveAction(data){
@@ -112,29 +103,38 @@ cc.Class({
             }
         }
 
-        cc.log("XXXXXXXXXXXXXXXXXXXXXXx")
-        cc.log('check 1', global.getSocket().connected);
-        // if(!cc.sys.isNative){
-        global.getSocket().on('connect', function() {
-            cc.log("Socket Connected");
-            cc.log('check 2', global.getSocket().connected);
-            var emit_obj = {
-                
-            };
-
-            // emit_obj = ecrypt.encrypt(JSON.stringify(emit_obj));
-            global.getSocket().emit("subscribe",emit_obj);
-
-        });
         self.listenEvent();
-        // }
-        // this.getComponent("MainMenu").load_layer.active = false;
-
-        // this.getComponent("MainMenu").initializeVariable();
     },
 
     listenEvent: function(){
         var self = this;
+
+        global.getSocket().on('connect', function() {
+            cc.log("Socket Connected");
+
+            if(global.isDemo) return;
+            var body = {
+                "username": global.settings.username,
+                "access_token": global.access_token,
+                "game_code": global.game_code,
+                "api_url": global.api_url,
+                "host_id": global.host_id,
+                "user_id": global.settings.user_id,
+                "device_type": self.getDeviceType(),
+                "browser_type": self.getBrowserType(),
+                "os_version": self.getOSversion(),
+                "os_type": self.getOSType(),
+                "h5_app": global.h5_app,
+                "phone_model": self.getPhoneModel(),
+                "user_agent": self.getUserAgent(),
+            };
+            if (global.isEncrypt) {
+                global.getSocket().emit('subscribe', self.encode(JSON.stringify(body)));
+            } else {
+                global.getSocket().emit('subscribe', body);
+            }
+        });
+
         global.getSocket().on('balance', function(data){
             data = self.socketReceiveAction(data);
 
@@ -170,21 +170,13 @@ cc.Class({
         }),
 
         global.getSocket().on('kick-user-maintenance', function(data){
-            // data = self.parseDataFormat(data);
-            // var resp = data;
-            data = self.parseDataFormat(data);
-            var resp = ecrypt.decrypt(data);
-            resp = self.parseDataFormat(resp);
-            cc.log(resp);
-
-            // self.getComponent("uiController").showErrorMessage(commonErrorMessage[URL.lang][resp.status_code], true);
         });
 
-        global.getSocket().on('kick-user', function(data){
+        global.getSocket().on('kickUser', function(data){
             data = self.socketReceiveAction(data);
 
-            global.isKicked = true;
-            global.kickMessage = data.message;
+            // global.isKicked = true;
+            global.kickMessage = "You have exceeded daily profit limit.";
         });
     },
 
@@ -198,5 +190,49 @@ cc.Class({
         global.getSocket().removeEventListener("kick-user");
     },
 
-    
+    //#region Get Device Info Functions
+    getDeviceType() {
+        if (cc.sys.isMobile) {
+            return 1;
+        } else if (this.mobileDetect.tablet() != null) {
+            return 2;
+        } else {
+            return 0;
+        }
+    },
+    getBrowserType() {
+        return cc.sys.browserType + " : " + cc.sys.browserVersion;
+    },
+    getOSversion() {
+        return cc.sys.osVersion;
+    },
+    getOSType() {
+        switch (cc.sys.os) {
+            case "OS X":
+                return 3;
+            case "Android":
+                return 0;
+            case "Windows":
+                return 2;
+            case "Linux":
+                return 4;
+            case "iOS":
+                return 1;
+            default:
+                return 99;
+        }
+
+    },
+    getPhoneModel() {
+        if (this.mobileDetect.phone() == null) {
+            return "Desktop";
+        } else {
+            return this.mobileDetect.phone();
+        }
+
+    },
+    getUserAgent() {
+        return window.navigator.userAgent;
+    },
+    //#endregion
 });

@@ -20,6 +20,9 @@ export function getSocket(){
 }
 export var host_id =0;
 export var access_token =0;
+export var is_promotion = null;
+export var h5_app = null;
+export var commonErrorMessage = null;
 export var isfullScreen=0;
 export function setSocket(value){
     cc.log("Setting socket");
@@ -47,7 +50,7 @@ export var settings = {
 }
 
 export var game_code = 23;
-export var ticket_id = -1;
+export var ticket_id = null;
 
 export var errorMessage = "";
 export var isEncrypt = true;

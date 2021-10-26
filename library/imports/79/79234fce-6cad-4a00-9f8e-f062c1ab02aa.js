@@ -8,11 +8,13 @@ var global = _interopRequireWildcard(require("GlobalData"));
 
 var constant = _interopRequireWildcard(require("Constant"));
 
-var ecrypt = _interopRequireWildcard(require("Encrypt"));
+var ecrypt = _interopRequireWildcard(require("ecrypt"));
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { "default": obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj["default"] = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var MobileDetect = require('mobile-detect');
 
 cc.Class({
   "extends": cc.Component,
@@ -29,26 +31,17 @@ cc.Class({
   },
   // use this for initialization
   //mg2020
-  onLoad: function onLoad() {// if(URL.lang != null){
-    //     if(URL.lang == "en" || URL.lang == "ch" || URL.lang == "tw" ){
-    //         global.setLang(URL.lang);
-    //     }else{
-    //         global.setLang("en");
-    //         URL.lang = "en";
-    //     }
-    // }else{
-    //     global.setLang("en");
-    //     URL.lang = "en";
-    // }
+  onLoad: function onLoad() {
+    this.mobileDetect = new MobileDetect(window.navigator.userAgent);
   },
   //#region Encryption
   decode: function decode(data) {
     // convert from base64 and return object in string
-    return atob(data);
+    return ecrypt.decrypt(data);
   },
   encode: function encode(data) {
     // convert string object to base64 string and return the string
-    return btoa(data);
+    return ecrypt.encrypt(data);
   },
   socketReceiveAction: function socketReceiveAction(data) {
     if (global.isEncrypt) {
@@ -113,22 +106,35 @@ cc.Class({
       }
     }
 
-    cc.log("XXXXXXXXXXXXXXXXXXXXXXx");
-    cc.log('check 1', global.getSocket().connected); // if(!cc.sys.isNative){
-
-    global.getSocket().on('connect', function () {
-      cc.log("Socket Connected");
-      cc.log('check 2', global.getSocket().connected);
-      var emit_obj = {}; // emit_obj = ecrypt.encrypt(JSON.stringify(emit_obj));
-
-      global.getSocket().emit("subscribe", emit_obj);
-    });
-    self.listenEvent(); // }
-    // this.getComponent("MainMenu").load_layer.active = false;
-    // this.getComponent("MainMenu").initializeVariable();
+    self.listenEvent();
   },
   listenEvent: function listenEvent() {
     var self = this;
+    global.getSocket().on('connect', function () {
+      cc.log("Socket Connected");
+      if (global.isDemo) return;
+      var body = {
+        "username": global.settings.username,
+        "access_token": global.access_token,
+        "game_code": global.game_code,
+        "api_url": global.api_url,
+        "host_id": global.host_id,
+        "user_id": global.settings.user_id,
+        "device_type": self.getDeviceType(),
+        "browser_type": self.getBrowserType(),
+        "os_version": self.getOSversion(),
+        "os_type": self.getOSType(),
+        "h5_app": global.h5_app,
+        "phone_model": self.getPhoneModel(),
+        "user_agent": self.getUserAgent()
+      };
+
+      if (global.isEncrypt) {
+        global.getSocket().emit('subscribe', self.encode(JSON.stringify(body)));
+      } else {
+        global.getSocket().emit('subscribe', body);
+      }
+    });
     global.getSocket().on('balance', function (data) {
       data = self.socketReceiveAction(data);
       global.settings.balance = data.after_balance;
@@ -153,18 +159,11 @@ cc.Class({
       data = self.socketReceiveAction(data);
       global.errorMessage = data.error;
       global.playerBalance = data.after_balance;
-    }), global.getSocket().on('kick-user-maintenance', function (data) {
-      // data = self.parseDataFormat(data);
-      // var resp = data;
-      data = self.parseDataFormat(data);
-      var resp = ecrypt.decrypt(data);
-      resp = self.parseDataFormat(resp);
-      cc.log(resp); // self.getComponent("uiController").showErrorMessage(commonErrorMessage[URL.lang][resp.status_code], true);
-    });
-    global.getSocket().on('kick-user', function (data) {
-      data = self.socketReceiveAction(data);
-      global.isKicked = true;
-      global.kickMessage = data.message;
+    }), global.getSocket().on('kick-user-maintenance', function (data) {});
+    global.getSocket().on('kickUser', function (data) {
+      data = self.socketReceiveAction(data); // global.isKicked = true;
+
+      global.kickMessage = "You have exceeded daily profit limit.";
     });
   },
   removeEventListener: function removeEventListener() {
@@ -175,7 +174,55 @@ cc.Class({
     global.getSocket().removeEventListener("onResult");
     global.getSocket().removeEventListener("kick-user-maintenance");
     global.getSocket().removeEventListener("kick-user");
-  }
+  },
+  //#region Get Device Info Functions
+  getDeviceType: function getDeviceType() {
+    if (cc.sys.isMobile) {
+      return 1;
+    } else if (this.mobileDetect.tablet() != null) {
+      return 2;
+    } else {
+      return 0;
+    }
+  },
+  getBrowserType: function getBrowserType() {
+    return cc.sys.browserType + " : " + cc.sys.browserVersion;
+  },
+  getOSversion: function getOSversion() {
+    return cc.sys.osVersion;
+  },
+  getOSType: function getOSType() {
+    switch (cc.sys.os) {
+      case "OS X":
+        return 3;
+
+      case "Android":
+        return 0;
+
+      case "Windows":
+        return 2;
+
+      case "Linux":
+        return 4;
+
+      case "iOS":
+        return 1;
+
+      default:
+        return 99;
+    }
+  },
+  getPhoneModel: function getPhoneModel() {
+    if (this.mobileDetect.phone() == null) {
+      return "Desktop";
+    } else {
+      return this.mobileDetect.phone();
+    }
+  },
+  getUserAgent: function getUserAgent() {
+    return window.navigator.userAgent;
+  } //#endregion
+
 });
 
 cc._RF.pop();

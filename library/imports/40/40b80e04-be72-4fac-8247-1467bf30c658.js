@@ -30,6 +30,7 @@ var G_1 = require("../../../G");
 var PlayerDieEvent_1 = require("../../../events/PlayerDieEvent");
 var PlayerJumpSuccessEvent_1 = require("../../../events/PlayerJumpSuccessEvent");
 var global = require("../../../GlobalData");
+var ecrypt = require("../../../Network/ecrypt");
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var Stage = /** @class */ (function (_super) {
     __extends(Stage, _super);
@@ -161,7 +162,7 @@ var Stage = /** @class */ (function (_super) {
                                 "changeBet": false,
                             };
                             if (global.isEncrypt) {
-                                global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                                global.getSocket().emit('send-result', ecrypt.encrypt(JSON.stringify(emit_result)));
                             }
                             else {
                                 global.getSocket().emit('send-result', emit_result);
@@ -200,7 +201,7 @@ var Stage = /** @class */ (function (_super) {
                             "changeBet": false,
                         };
                         if (global.isEncrypt) {
-                            global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                            global.getSocket().emit('send-result', ecrypt.encrypt(JSON.stringify(emit_result)));
                         }
                         else {
                             global.getSocket().emit('send-result', emit_result);
@@ -341,7 +342,7 @@ var Stage = /** @class */ (function (_super) {
                     cc.find("Canvas/InGameBetting").getComponent("InGameBetting").playerDie = this.playerDie;
                     if (!this.playerDie) {
                         if (global.isEncrypt) {
-                            global.getSocket().emit('changeBet', btoa(JSON.stringify(emit_obj)));
+                            global.getSocket().emit('changeBet', ecrypt.encrypt(JSON.stringify(emit_obj)));
                         }
                         else {
                             global.getSocket().emit('changeBet', emit_obj);
@@ -450,7 +451,7 @@ var Stage = /** @class */ (function (_super) {
                                         "changeBet": false,
                                     };
                                     if (global.isEncrypt) {
-                                        global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                                        global.getSocket().emit('send-result', ecrypt.encrypt(JSON.stringify(emit_result)));
                                     }
                                     else {
                                         global.getSocket().emit('send-result', emit_result);
@@ -489,7 +490,7 @@ var Stage = /** @class */ (function (_super) {
                                     "changeBet": false,
                                 };
                                 if (global.isEncrypt) {
-                                    global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                                    global.getSocket().emit('send-result', ecrypt.encrypt(JSON.stringify(emit_result)));
                                 }
                                 else {
                                     global.getSocket().emit('send-result', emit_result);

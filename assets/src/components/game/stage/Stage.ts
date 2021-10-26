@@ -4,6 +4,7 @@ import { G } from "../../../G";
 import { PlayerDieEvent } from "../../../events/PlayerDieEvent";
 import { PlayerJumpSuccessEvent } from "../../../events/PlayerJumpSuccessEvent";
 import * as global from "../../../GlobalData";
+import * as ecrypt from "../../../Network/ecrypt";
 
 const { ccclass, property } = cc._decorator;
 
@@ -171,7 +172,7 @@ export class Stage extends cc.Component {
 
                             };
                             if(global.isEncrypt){
-                                global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                                global.getSocket().emit('send-result', ecrypt.encrypt(JSON.stringify(emit_result)));
                             }
                             else{
                                 global.getSocket().emit('send-result', emit_result);
@@ -212,7 +213,7 @@ export class Stage extends cc.Component {
 
                         };
                         if(global.isEncrypt){
-                            global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                            global.getSocket().emit('send-result', ecrypt.encrypt(JSON.stringify(emit_result)));
                         }
                         else{
                             global.getSocket().emit('send-result', emit_result);
@@ -371,7 +372,7 @@ export class Stage extends cc.Component {
                     cc.find("Canvas/InGameBetting").getComponent("InGameBetting").playerDie=this.playerDie;
                     if(!this.playerDie){
                         if(global.isEncrypt){
-                            global.getSocket().emit('changeBet', btoa(JSON.stringify(emit_obj)));
+                            global.getSocket().emit('changeBet', ecrypt.encrypt(JSON.stringify(emit_obj)));
                         }
                         else{
                             global.getSocket().emit('changeBet', emit_obj);
@@ -489,7 +490,7 @@ export class Stage extends cc.Component {
 
                                     };
                                     if (global.isEncrypt) {
-                                        global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                                        global.getSocket().emit('send-result', ecrypt.encrypt(JSON.stringify(emit_result)));
                                     }
                                     else {
                                         global.getSocket().emit('send-result', emit_result);
@@ -531,7 +532,7 @@ export class Stage extends cc.Component {
 
                                 };
                                 if (global.isEncrypt) {
-                                    global.getSocket().emit('send-result', btoa(JSON.stringify(emit_result)));
+                                    global.getSocket().emit('send-result', ecrypt.encrypt(JSON.stringify(emit_result)));
                                 }
                                 else {
                                     global.getSocket().emit('send-result', emit_result);
