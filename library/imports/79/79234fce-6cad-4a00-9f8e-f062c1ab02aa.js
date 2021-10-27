@@ -161,8 +161,8 @@ cc.Class({
       global.playerBalance = data.after_balance;
     }), global.getSocket().on('kick-user-maintenance', function (data) {});
     global.getSocket().on('kickUser', function (data) {
-      data = self.socketReceiveAction(data); // global.isKicked = true;
-
+      data = self.socketReceiveAction(data);
+      global.isKicked = true;
       global.kickMessage = "You have exceeded daily profit limit.";
     });
   },
