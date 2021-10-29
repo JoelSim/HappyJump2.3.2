@@ -56,7 +56,6 @@ var Player = /** @class */ (function (_super) {
     Player.prototype.readyJump = function () {
         this.readyJumpAudioId = cc.audioEngine.play(this.readyJumpAudio, false, global.getEffectVolume());
         cc.find("title", this.node).active = true;
-        //cc.find("rotateAnchor/sprite",this.node).runAction(cc.scaleTo(2,1,0.5));
         this.node.getComponent(cc.Animation).play("ChickenCharge");
         cc.find("rotateAnchor/particlesystem", this.node).active = true;
         this.speed = this.initSpeed;

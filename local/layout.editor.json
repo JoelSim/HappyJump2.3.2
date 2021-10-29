@@ -92,7 +92,6 @@
         "inspector"
       ]
     },
-    " common-asset-worker-worker": {},
     " build-worker-worker": {}
   },
   "panels": {

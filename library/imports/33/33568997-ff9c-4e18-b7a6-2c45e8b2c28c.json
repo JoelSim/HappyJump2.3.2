@@ -4621,7 +4621,7 @@
     "_enabled": true,
     "jumpDistance": 0,
     "platformConsoRate": 80,
-    "power": 900,
+    "power": 1400,
     "initSpeed": 150,
     "readyJumpAudio": {
       "__uuid__": "935ab888-4cf4-4fd1-96ec-85c20f74869c"
@@ -18076,8 +18076,8 @@
     "target": {
       "__id__": 332
     },
-    "component": "SettingManager",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "f4205UA9ohBwpoCELzXYWU1",
     "handler": "fullScreen",
     "customEventData": ""
   },
@@ -18086,8 +18086,8 @@
     "target": {
       "__id__": 228
     },
-    "component": "AudioManager",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "4131c/FWx9Dd7nWFL8TgiJp",
     "handler": "playUIbuttonSound",
     "customEventData": ""
   },
