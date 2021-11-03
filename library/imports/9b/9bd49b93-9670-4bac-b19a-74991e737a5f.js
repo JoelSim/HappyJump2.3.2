@@ -47,17 +47,22 @@ var Player = /** @class */ (function (_super) {
         _this.timer = 0;
         _this.jumpCount = 0;
         _this.stage = null;
+        _this.particle = null;
+        _this.particleSystem = null;
+        _this.particleGreen = false;
         return _this;
     }
     Player.prototype.onLoad = function () {
         cc.find("title", this.node).active = false;
         this.stage = cc.find("Canvas/stage").getComponent("Stage");
+        this.particle = cc.find("rotateAnchor/particlesystem", this.node);
+        this.particleSystem = this.particle.getComponent(cc.ParticleSystem);
     };
     Player.prototype.readyJump = function () {
         this.readyJumpAudioId = cc.audioEngine.play(this.readyJumpAudio, false, global.getEffectVolume());
         cc.find("title", this.node).active = true;
         this.node.getComponent(cc.Animation).play("ChickenCharge");
-        cc.find("rotateAnchor/particlesystem", this.node).active = true;
+        this.particle.active = true;
         this.speed = this.initSpeed;
         this.isReadyJump = true;
         this.isCharging = true;
@@ -67,7 +72,7 @@ var Player = /** @class */ (function (_super) {
         this.jumpCount += 1;
         this.isCharging = false;
         this.isJumping = true;
-        cc.find("rotateAnchor/particlesystem", this.node).active = false;
+        this.particle.active = false;
         this.scheduleOnce(function () {
             _this.isJumping = false;
         }, 1);
@@ -118,6 +123,25 @@ var Player = /** @class */ (function (_super) {
         if (this.isReadyJump) {
             this.speed += dt * this.power;
             this.jumpDistance += this.speed * dt;
+            cc.log(this.jumpDistance);
+            if (this.jumpDistance >= 460) {
+                if (this.particleGreen == false) {
+                    this.particleGreen = true;
+                    this.particleSystem.startColor = cc.color(0, 255, 0, 255);
+                    this.particleSystem.startColorVar = cc.color(0, 255, 0, 255);
+                    this.particleSystem.endColor = cc.color(0, 255, 0, 255);
+                    this.particleSystem.endColorVar = cc.color(0, 255, 0, 255);
+                }
+            }
+            else {
+                if (this.particleGreen) {
+                    this.particleGreen = false;
+                    this.particleSystem.startColor = cc.color(255, 235, 9, 255);
+                    this.particleSystem.startColorVar = cc.color(255, 255, 255, 255);
+                    this.particleSystem.endColor = cc.color(143, 22, 22, 255);
+                    this.particleSystem.endColorVar = cc.color(255, 255, 255, 255);
+                }
+            }
         }
     };
     __decorate([

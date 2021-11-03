@@ -17,7 +17,7 @@
         "__id__": 2
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [],
     "_prefab": null,
     "_opacity": 255,
@@ -4180,7 +4180,7 @@
       "__uuid__": "472df5d3-35e7-4184-9e6c-7f41bee65ee3"
     },
     "_texture": null,
-    "_stopped": true,
+    "_stopped": false,
     "playOnLoad": true,
     "autoRemoveOnFinish": false,
     "totalParticles": 200,
@@ -4211,9 +4211,9 @@
     },
     "_endColorVar": {
       "__type__": "cc.Color",
-      "r": 247,
-      "g": 247,
-      "b": 247,
+      "r": 255,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "angle": 360,

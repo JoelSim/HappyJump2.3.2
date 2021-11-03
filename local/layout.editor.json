@@ -13,18 +13,18 @@
         "type": "dock-h",
         "children": [
           {
-            "width": 1289,
-            "height": 916,
+            "width": 1247.984375,
+            "height": 932,
             "type": "dock-v",
             "children": [
               {
-                "width": 1289,
-                "height": 488.984375,
+                "width": 1247.984375,
+                "height": 498,
                 "type": "dock-h",
                 "children": [
                   {
-                    "width": 1012.984375,
-                    "height": 488.984375,
+                    "width": 708.984375,
+                    "height": 498,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -32,8 +32,8 @@
                     ]
                   },
                   {
-                    "width": 273,
-                    "height": 488.984375,
+                    "width": 536,
+                    "height": 498,
                     "type": "panel",
                     "active": 1,
                     "children": [
@@ -44,23 +44,23 @@
                 ]
               },
               {
-                "width": 1289,
-                "height": 424,
+                "width": 1247.984375,
+                "height": 431,
                 "type": "dock-h",
                 "children": [
                   {
-                    "width": 798.984375,
-                    "height": 424,
+                    "width": 773.984375,
+                    "height": 431,
                     "type": "panel",
-                    "active": 0,
+                    "active": 1,
                     "children": [
                       "console",
                       "timeline"
                     ]
                   },
                   {
-                    "width": 487,
-                    "height": 424,
+                    "width": 471,
+                    "height": 431,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -72,8 +72,8 @@
             ]
           },
           {
-            "width": 612,
-            "height": 916,
+            "width": 669,
+            "height": 932,
             "type": "panel",
             "active": 0,
             "children": [
@@ -91,8 +91,7 @@
         "assets",
         "inspector"
       ]
-    },
-    " build-worker-worker": {}
+    }
   },
   "panels": {
     "project-settings": {

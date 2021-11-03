@@ -138,7 +138,7 @@ export class Stage extends cc.Component {
             let dir = this.player.direction;
             let targetPos = new cc.Vec2(this.player.node.x + jumpDistance * dir, this.player.node.y + jumpDistance * this.arrayRatio);
             let targetWorldPos = this.player.node.parent.convertToWorldSpaceAR(targetPos);
-            let formatPos = this.nextBlock.getAnchorLocation(targetWorldPos, dir,global.platform);
+            let formatPos = this.nextBlock.getAnchorLocation(targetWorldPos, dir, global.platform);
             this.addTotalBet(cc.find("Canvas/InGameBetting").getComponent("InGameBetting").currentBetting);
             if (formatPos !== null) {
                 this.player.jumpTo(formatPos, () => {
