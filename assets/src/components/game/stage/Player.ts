@@ -33,14 +33,13 @@ export class Player extends cc.Component {
     private jumpCount = 0;
     private stage =null;
     private particle = null;
-    private particleSystem = null;
-    private particleGreen = false;
+    private particle2 = null;
 
     onLoad() {
         cc.find("title",this.node).active = false;
         this.stage = cc.find("Canvas/stage").getComponent("Stage");
         this.particle = cc.find("rotateAnchor/particlesystem",this.node);
-        this.particleSystem = this.particle.getComponent(cc.ParticleSystem);
+        this.particle2 = cc.find("rotateAnchor/particlesystemGreen",this.node);
     }
 
     public readyJump() {
@@ -58,6 +57,7 @@ export class Player extends cc.Component {
         this.isCharging = false;
         this.isJumping = true;
         this.particle.active = false;
+        this.particle2.active = false;
 
         this.scheduleOnce(()=>{
             this.isJumping=false;
@@ -115,23 +115,16 @@ export class Player extends cc.Component {
         if(this.isReadyJump) {
             this.speed += dt * this.power;
             this.jumpDistance += this.speed * dt;
-            cc.log(this.jumpDistance);
-            if(this.jumpDistance >= 460){
-                if(this.particleGreen == false){
-                    this.particleGreen = true;
-                    this.particleSystem.startColor = cc.color(0, 255, 0, 255);
-                    this.particleSystem.startColorVar = cc.color(0, 255, 0, 255);
-                    this.particleSystem.endColor = cc.color(0, 255, 0, 255);
-                    this.particleSystem.endColorVar = cc.color(0, 255, 0, 255);
+            if(this.jumpDistance >= 380 && this.jumpDistance <= 600){
+                if(this.particle2.active == false){
+                    this.particle.active = false;
+                    this.particle2.active = true;
                 }
             }
             else{
-                if(this.particleGreen){
-                    this.particleGreen = false;
-                    this.particleSystem.startColor = cc.color(255, 235, 9, 255);
-                    this.particleSystem.startColorVar = cc.color(255, 255, 255, 255);
-                    this.particleSystem.endColor = cc.color(143, 22, 22, 255);
-                    this.particleSystem.endColorVar = cc.color(255, 255, 255, 255);
+                if(this.particle.active == false){
+                    this.particle.active = true;
+                    this.particle2.active = false;
                 }
             }
         }

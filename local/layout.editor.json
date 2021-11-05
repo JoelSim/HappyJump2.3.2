@@ -13,18 +13,18 @@
         "type": "dock-h",
         "children": [
           {
-            "width": 1247.984375,
-            "height": 932,
+            "width": 1237.578125,
+            "height": 916,
             "type": "dock-v",
             "children": [
               {
-                "width": 1247.984375,
-                "height": 498,
+                "width": 1237.578125,
+                "height": 489.421875,
                 "type": "dock-h",
                 "children": [
                   {
-                    "width": 708.984375,
-                    "height": 498,
+                    "width": 703.0625,
+                    "height": 489.421875,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -32,8 +32,8 @@
                     ]
                   },
                   {
-                    "width": 536,
-                    "height": 498,
+                    "width": 531.515625,
+                    "height": 489.421875,
                     "type": "panel",
                     "active": 1,
                     "children": [
@@ -44,13 +44,13 @@
                 ]
               },
               {
-                "width": 1247.984375,
-                "height": 431,
+                "width": 1237.578125,
+                "height": 423.578125,
                 "type": "dock-h",
                 "children": [
                   {
-                    "width": 773.984375,
-                    "height": 431,
+                    "width": 767.515625,
+                    "height": 423.578125,
                     "type": "panel",
                     "active": 1,
                     "children": [
@@ -59,8 +59,8 @@
                     ]
                   },
                   {
-                    "width": 471,
-                    "height": 431,
+                    "width": 467.0625,
+                    "height": 423.578125,
                     "type": "panel",
                     "active": 0,
                     "children": [
@@ -72,8 +72,8 @@
             ]
           },
           {
-            "width": 669,
-            "height": 932,
+            "width": 663.40625,
+            "height": 916,
             "type": "panel",
             "active": 0,
             "children": [
@@ -91,7 +91,8 @@
         "assets",
         "inspector"
       ]
-    }
+    },
+    " build-worker-worker": {}
   },
   "panels": {
     "project-settings": {

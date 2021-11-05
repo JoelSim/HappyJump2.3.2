@@ -6794,8 +6794,8 @@
     "target": {
       "__id__": 2
     },
-    "component": "StartScene",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "9a98da22QxGVrT4WQx6TGck",
     "handler": "fullScreen",
     "customEventData": ""
   },
@@ -6804,8 +6804,8 @@
     "target": {
       "__id__": 43
     },
-    "component": "AudioManager",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "4131c/FWx9Dd7nWFL8TgiJp",
     "handler": "playUIbuttonSound",
     "customEventData": ""
   },
@@ -6897,8 +6897,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "v1.2.9",
-    "_N$string": "v1.2.9",
+    "_string": "v1.3.0",
+    "_N$string": "v1.3.0",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,

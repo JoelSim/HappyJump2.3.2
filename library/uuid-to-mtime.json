@@ -3045,8 +3045,8 @@
     "relativePath": "src\\StartScene.js"
   },
   "d8f82d9f-eb82-452a-a5ec-f1dace2bdec5": {
-    "asset": 1635322615650,
-    "meta": 1635322615812,
+    "asset": 1636096593797,
+    "meta": 1636096593980,
     "relativePath": "res\\scenes\\StartScene.fire"
   },
   "adad0995-33c3-46a6-af1f-86bddd0fc9ab": {
@@ -3110,18 +3110,18 @@
     "relativePath": "src\\Network\\Socket.js"
   },
   "40b80e04-be72-4fac-8247-1467bf30c658": {
-    "asset": 1635931165837,
-    "meta": 1635944408218,
+    "asset": 1636096087680,
+    "meta": 1636096089023,
     "relativePath": "src\\components\\game\\stage\\Stage.ts"
   },
-  "33568997-ff9c-4e18-b7a6-2c45e8b2c28c": {
-    "asset": 1635944524154,
-    "meta": 1635944524508,
-    "relativePath": "res\\scenes\\game.fire"
-  },
   "9bd49b93-9670-4bac-b19a-74991e737a5f": {
-    "asset": 1635944522500,
-    "meta": 1635944523675,
+    "asset": 1636096438518,
+    "meta": 1636096439833,
     "relativePath": "src\\components\\game\\stage\\Player.ts"
+  },
+  "33568997-ff9c-4e18-b7a6-2c45e8b2c28c": {
+    "asset": 1636096575964,
+    "meta": 1636096576276,
+    "relativePath": "res\\scenes\\game.fire"
   }
 }
