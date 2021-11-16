@@ -144,7 +144,7 @@ cc.Class({
                             'user_id': globalData.settings.user_id,
                             'api_url':globalData.api_url,
                             'changeBet':true,
-
+                            'is_angpao': 0,
                         };
                         if(globalData.isEncrypt){
                             emit_result = ecrypt.encrypt(JSON.stringify(emit_result));
@@ -252,7 +252,7 @@ cc.Class({
                         'user_id': globalData.settings.user_id,
                         'api_url':globalData.api_url,
                         'changeBet':true,
-
+                        'is_angpao': 0,
                     };
                     if(globalData.isEncrypt){
                         emit_result = ecrypt.encrypt(JSON.stringify(emit_result));
@@ -336,7 +336,7 @@ cc.Class({
                     'user_id': globalData.settings.user_id,
                     'api_url':globalData.api_url,
                     'changeBet':true,
-
+                    'is_angpao': 0,
                 };
                 if(globalData.isEncrypt){
                     emit_result = ecrypt.encrypt(JSON.stringify(emit_result));
