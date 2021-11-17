@@ -12619,8 +12619,8 @@
     "target": {
       "__id__": 184
     },
-    "component": "InGameBetting",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "567f7h+HNVBhpLUppM2yspP",
     "handler": "hide",
     "customEventData": ""
   },
@@ -23647,8 +23647,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "v1.3.1",
-    "_N$string": "v1.3.1",
+    "_string": "v1.3.2",
+    "_N$string": "v1.3.2",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,
