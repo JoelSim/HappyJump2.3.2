@@ -71,7 +71,7 @@ cc.Class({
 		global.host_id = this.getParameterByName('host_id');
 		global.access_token = this.getParameterByName('access_token');
 		global.is_promotion = this.getParameterByName('is_promotion');
-		global.h5_app = this.getParameterByName('access_token');
+		global.h5_app = this.getH5App();
 		let xhr = new XMLHttpRequest();
 		var self = this;
 
