@@ -78,13 +78,13 @@ cc.Class({
 
     playWin(){
         if(globalData.getEffectVolume()!=0){
-            cc.audioEngine.play(this.winAudio,false,1);
+            cc.audioEngine.play(this.winAudio,false,0.2);
 
         }
     },
     playLoseSound(){
         if(globalData.getEffectVolume()!=0){
-            cc.audioEngine.play(this.loseAudio,false,1);
+            cc.audioEngine.play(this.loseAudio,false,0.2);
 
         }
 
@@ -92,7 +92,7 @@ cc.Class({
     },
     playLandPerfect(){
         if(globalData.getEffectVolume()!=0){
-            cc.audioEngine.play(this.perfectAudio,false,1);
+            cc.audioEngine.play(this.perfectAudio,false,0.2);
 
         }
 
@@ -100,7 +100,7 @@ cc.Class({
 
     playLandConso(){
         if(globalData.getEffectVolume()!=0){
-            cc.audioEngine.play(this.consoAudio,false,1);
+            cc.audioEngine.play(this.consoAudio,false,0.2);
 
         }
 
@@ -108,7 +108,7 @@ cc.Class({
 
     playUIbuttonSound(){
         if(globalData.getEffectVolume()!=0){
-            cc.audioEngine.play(this.uiButtonSound,false,1);
+            cc.audioEngine.play(this.uiButtonSound,false,0.2);
 
         }
 
@@ -116,8 +116,8 @@ cc.Class({
 
     toggleMute(){
         if(this.musicToggle.isChecked){
-            cc.audioEngine.setMusicVolume(1);
-            globalData.setEffectVolume(1);
+            cc.audioEngine.setMusicVolume(0.2);
+            globalData.setEffectVolume(0.2);
         }
         else{
             cc.audioEngine.setMusicVolume(0);

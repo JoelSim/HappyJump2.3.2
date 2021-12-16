@@ -1,4 +1,7 @@
-var betSelection =0;
+var betSelection = 0;
+export var betAmountIndex = 0;
+export var configBetRange = [2,4,6,8];
+export var configBetAmount = [2,4,6,8,10];
 var sound = 1;
 var effect_volume = 1;
 var rotate_volume = 1;
@@ -80,7 +83,6 @@ export function setBetSelection(value){
     betSelection = value;
     return (betSelection);
 }
-
 
 export function getSound(){
     return sound;

@@ -75,40 +75,14 @@ cc.Class({
 
     SetAmount(even, value) {
         this.maintBetOption = globalData.getBetSelection();
-        if (this.maintBetOption == 0) {
-            this.myValue = 1;
-        }
-        if (this.maintBetOption == 1) {
-            this.myValue = 5;
+        this.myValue = globalData.configBetRange[this.maintBetOption];
 
-        }
-        if (this.maintBetOption == 2) {
-            this.myValue = 10;
-        }
-        if (this.maintBetOption == 3) {
-            this.myValue = 20;
-        }
         for (let i = 0; i < this.bettingOptionText.length; i++) {
-            if (i == 0) {
-                this.bettingOptionText[i].getComponent(cc.Label).string = ((1 * this.myValue));
-            }
-            else if (i == 1) {
-                this.bettingOptionText[i].getComponent(cc.Label).string = ((1 * this.myValue)) * 2;
-            }
-            else if (i == 2) {
-                this.bettingOptionText[i].getComponent(cc.Label).string = ((1 * this.myValue)) * 3;
-            }
-            else {
-                this.bettingOptionText[i].getComponent(cc.Label).string = ((1 * this.myValue) / (this.bettingOptionText.length - i)) * 10;
-            }
+            let index = i;
+            this.bettingOptionText[index].getComponent(cc.Label).string = this.myValue * globalData.configBetAmount[index];
         }
 
-        if (this.selectedBetOption < 3) {
-            this.currentBetting = ((1 * this.myValue)) * (this.selectedBetOption + 1);
-        }
-        else {
-            this.currentBetting = ((1 * this.myValue) / (this.bettingOptionText.length - this.selectedBetOption)) * 10;
-        }
+        this.currentBetting = this.myValue * globalData.configBetAmount[globalData.betAmountIndex];
 
         globalData.setBetAmount(this.currentBetting);
         for (let i = 0; i < this.selectedBet.length; i++) {
@@ -205,6 +179,7 @@ cc.Class({
 
     selectBetOption(event, value) {
         this.selectedBetOption = Number(value);
+        globalData.betAmountIndex = this.selectedBetOption;
         //this.lastBetting = this.currentBetting;
 
         this.canPlay = true;
@@ -222,12 +197,7 @@ cc.Class({
             }
         }
 
-        if (this.selectedBetOption < 3) {
-            this.currentBetting = ((1 * this.myValue)) * (this.selectedBetOption + 1);
-        }
-        else {
-            this.currentBetting = ((1 * this.myValue) / (this.bettingOptionText.length - this.selectedBetOption)) * 10;
-        }
+        this.currentBetting = globalData.configBetRange[globalData.getBetSelection()] * globalData.configBetAmount[globalData.betAmountIndex];
 
         globalData.setBetAmount(this.currentBetting);
 

@@ -85,6 +85,7 @@ cc.Class({
 						var parsed = JSON.parse(response);
 		
 						global.settings = parsed.data;
+						cc.log(global.settings);
 						constant.setSocketURL(global.settings.socket_url);
 						if(!global.getSocket()){
 							self.getComponent("Socket").connectSocket();
@@ -133,6 +134,7 @@ cc.Class({
 					var parsed = JSON.parse(response);
 	
 					global.settings = parsed.data;
+					cc.log(global.settings);
 					constant.setSocketURL(global.settings.socket_url);
 					if(!global.getSocket()){
 						self.getComponent("Socket").connectSocket();
