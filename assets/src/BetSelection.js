@@ -13,7 +13,6 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-
         canvas:{
             default:null,
             type:cc.Node,
@@ -22,17 +21,18 @@ cc.Class({
             default:null,
             type:cc.Button
 		},
-
-
 		selectedBet:{
 			default:[],
 			type:[cc.Node]
         },
-        
         loadingLayer:{
             default:null,
             type:cc.Node,
-        }
+        },
+		betOptionsLabel:{
+			default:[],
+			type:[cc.Label],
+		},
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -52,7 +52,22 @@ cc.Class({
 
     },
 
-	// update (dt) {},
+	updateBetRangeAndBetAmountConfig(settings){
+		globalData.configBetRange[0] = settings.bet_chip_1;
+		globalData.configBetRange[1] = settings.bet_chip_2;
+		globalData.configBetRange[2] = settings.bet_chip_3;
+		globalData.configBetRange[3] = settings.bet_chip_4;
+		globalData.configBetAmount[0] = settings.bet_amount_1;
+		globalData.configBetAmount[1] = settings.bet_amount_2;
+		globalData.configBetAmount[2] = settings.bet_amount_3;
+		globalData.configBetAmount[3] = settings.bet_amount_4;
+		globalData.configBetAmount[4] = settings.bet_amount_5;
+
+		for(let i = 0; i < this.betOptionsLabel.length; i++){
+			let index = i;
+			this.betOptionsLabel[i].string = "x" + globalData.configBetRange[index];
+		}
+	},
 
 	selectBetOption(event, value){
 		this.selectedBetOption = Number(value);

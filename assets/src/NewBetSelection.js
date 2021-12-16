@@ -23,7 +23,10 @@ cc.Class({
             type:cc.Button
 		},
 
-
+		inGameBettingNode:{
+			default:null,
+			type:cc.Node,
+		},
 		selectedBet:{
 			default:[],
 			type:[cc.Node]
@@ -32,7 +35,11 @@ cc.Class({
         loadingLayer:{
             default:null,
             type:cc.Node,
-        }
+        },
+		betOptionsLabel:{
+			default:[],
+			type:[cc.Label],
+		},
     },
 
     // LIFE-CYCLE CALLBACKS:
@@ -44,6 +51,13 @@ cc.Class({
     start () {
 		this.selectBet();
 
+		for(let i = 0; i < this.betOptionsLabel.length; i++){
+			let index = i;
+			this.betOptionsLabel[i].string = "x" + globalData.configBetRange[index];
+		}
+		if(this.inGameBettingNode != null){
+			this.inGameBettingNode.getComponent("InGameBetting").updateBetAmountLabel();
+		}
     },
 
 	// update (dt) {},

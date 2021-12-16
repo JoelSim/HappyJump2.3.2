@@ -73,16 +73,20 @@ cc.Class({
         }
     },
 
+    updateBetAmountLabel(){
+        for (let i = 0; i < this.bettingOptionText.length; i++) {
+            let index = i;
+            this.bettingOptionText[index].getComponent(cc.Label).string = globalData.configBetRange[globalData.getBetSelection()] * globalData.configBetAmount[index];
+        }
+    },
+
     SetAmount(even, value) {
         this.maintBetOption = globalData.getBetSelection();
         this.myValue = globalData.configBetRange[this.maintBetOption];
 
-        for (let i = 0; i < this.bettingOptionText.length; i++) {
-            let index = i;
-            this.bettingOptionText[index].getComponent(cc.Label).string = this.myValue * globalData.configBetAmount[index];
-        }
+        this.updateBetAmountLabel();
 
-        this.currentBetting = this.myValue * globalData.configBetAmount[globalData.betAmountIndex];
+        this.currentBetting = globalData.configBetRange[globalData.getBetSelection()] * globalData.configBetAmount[globalData.betAmountIndex];
 
         globalData.setBetAmount(this.currentBetting);
         for (let i = 0; i < this.selectedBet.length; i++) {
@@ -100,8 +104,6 @@ cc.Class({
         if (this.lastBetting != this.currentBetting) {
             if (globalData.settings.balance + this.lastBetting >= this.currentBetting) {
                 globalData.currentBetSlot=this.selectedBetOption;
-                // this.currentBettingLabel.string = this.currentBetting;
-                //eligible for betting;
                 this.loadingLayer.opacity = 255;
                 this.loadingLayer.active = true;
                 if (Number(value) == 0) {
@@ -143,7 +145,7 @@ cc.Class({
                             'host_id': globalData.host_id,
                             'access_token': globalData.access_token,
                             'game_code': 23,
-                            'betAmount': this.currentBetting,
+                            'betAmount': globalData.configBetRange[globalData.getBetSelection()] * globalData.configBetAmount[globalData.betAmountIndex],
                             "key": "Happy Jump bet with these index 1st",
                             "description": "bet",
                             "user_id": globalData.settings.user_id,
@@ -180,7 +182,6 @@ cc.Class({
     selectBetOption(event, value) {
         this.selectedBetOption = Number(value);
         globalData.betAmountIndex = this.selectedBetOption;
-        //this.lastBetting = this.currentBetting;
 
         this.canPlay = true;
         // this.node.active = false;
@@ -206,7 +207,6 @@ cc.Class({
                 //eligible for betting;
                 globalData.currentBetSlot=this.selectedBetOption;
                 globalData.currentBet = Number(value);
-                // this.currentBettingLabel.string = this.currentBetting;
                 this.loadingLayer.opacity = 255;
                 this.loadingLayer.active = true;
 
@@ -355,7 +355,7 @@ cc.Class({
                         'host_id': globalData.host_id,
                         'access_token': globalData.access_token,
                         'game_code': 23,
-                        'betAmount': this.currentBetting,
+                        'betAmount': globalData.configBetRange[globalData.getBetSelection()] * globalData.configBetAmount[globalData.betAmountIndex],
                         "key": "Happy Jump bet with these index 1st",
                         "description": "bet",
                         "user_id": globalData.settings.user_id,

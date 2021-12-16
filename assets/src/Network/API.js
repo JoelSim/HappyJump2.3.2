@@ -37,6 +37,10 @@ cc.Class({
 			default:null,
 			type:cc.Node,	
 		},
+		betSelectionNode:{
+			default:null,
+			type:cc.Node,
+		},
     },
 
     // use this for initialization
@@ -91,6 +95,7 @@ cc.Class({
 							self.getComponent("Socket").connectSocket();
 						}
 						self.getErrorMessage();
+						self.betSelectionNode.getComponent("BetSelection").updateBetRangeAndBetAmountConfig(global.settings);
 					}
 				
 				};
@@ -140,6 +145,7 @@ cc.Class({
 						self.getComponent("Socket").connectSocket();
 					}
 					self.getErrorMessage();
+					self.betSelectionNode.getComponent("BetSelection").updateBetRangeAndBetAmountConfig(global.settings);
 					
 					//global.balance = global.settings.balance;
 	

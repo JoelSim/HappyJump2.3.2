@@ -360,7 +360,7 @@ export class Stage extends cc.Component {
                         'host_id':global.host_id,
                         'access_token': global.access_token,
                         'game_code': 23,
-                        'betAmount': cc.find("Canvas/InGameBetting").getComponent("InGameBetting").currentBetting,
+                        'betAmount': global.configBetRange[global.getBetSelection()] * global.configBetAmount[global.betAmountIndex],
                         "key": "Happy Jump bet with these index 1st",
                         "description": "bet",
                         "user_id": global.settings.user_id,
