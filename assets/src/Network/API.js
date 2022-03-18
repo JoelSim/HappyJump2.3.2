@@ -118,7 +118,7 @@ cc.Class({
 			var json = JSON.stringify(body);
 			var apiURL= global.api_url;
 			if (global.api_url == undefined) {
-				apiURL = "https://bo-stage.slot28.com";
+				apiURL = "https://bo-stage.apollogames.co";
 				if (global.isProduction) {
 					apiURL = "https://bo.slot28.com";
 				}
@@ -177,7 +177,7 @@ cc.Class({
 			var json = JSON.stringify(body);
 			var apiURL = global.api_url;
 			if (global.api_url == undefined) {
-				apiURL = "https://bo-stage.slot28.com";
+				apiURL = "https://bo-stage.apollogames.co";
 				if (global.isProduction) {
 					apiURL = "https://bo.slot28.com";
 				}
