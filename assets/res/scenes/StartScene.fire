@@ -5388,8 +5388,8 @@
     "target": {
       "__id__": 33
     },
-    "component": "BetSelection",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "8c4d8M2FYNB8pqHAGurgrUI",
     "handler": "selectBetOption",
     "customEventData": "3"
   },
@@ -5398,8 +5398,8 @@
     "target": {
       "__id__": 43
     },
-    "component": "AudioManager",
-    "_componentId": "",
+    "component": "",
+    "_componentId": "4131c/FWx9Dd7nWFL8TgiJp",
     "handler": "playUIbuttonSound",
     "customEventData": ""
   },
@@ -6908,8 +6908,8 @@
     ],
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
-    "_string": "v1.3.6",
-    "_N$string": "v1.3.6",
+    "_string": "v1.3.7",
+    "_N$string": "v1.3.7",
     "_fontSize": 40,
     "_lineHeight": 40,
     "_enableWrapText": true,

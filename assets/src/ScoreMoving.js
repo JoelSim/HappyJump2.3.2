@@ -60,7 +60,6 @@ cc.Class({
 
     },
     onLoad () {
-        //this.generateScore();
         var self =this;
         cc.systemEvent.on("Change-Bet", function() {
             self.generateScore();
@@ -80,13 +79,10 @@ cc.Class({
 
     generateScore(){
         if(!this.alreadyStop){
-            cc.log("HIHIHIHI");
             this.perfectScore = globalData.perfectScore;
             this.consoScore = globalData.consoScore;
-            cc.log(this.perfectScore);
+            cc.log("Gen Score:", this.perfectScore);
             this.scoreLabel.string = Math.round(this.perfectScore * 10) / 10;
-            cc.log( this.scoreLabel.string+"AKKA");
-
         }
     },
 

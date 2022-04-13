@@ -116,9 +116,6 @@ export class Player extends cc.Component {
             this.speed += dt * this.power;
             this.jumpDistance += this.speed * dt;
             if(this.jumpDistance >= 300){
-                if(this.jumpDistance > 500){
-                    this.jumpDistance = 500;
-                }
                 if(this.particle2.active == false){
                     this.particle.active = false;
                     this.particle2.active = true;
@@ -130,18 +127,12 @@ export class Player extends cc.Component {
                     this.particle2.active = false;
                 }
             }
-            // if(this.jumpDistance >= 380 && this.jumpDistance <= 600){
-            //     if(this.particle2.active == false){
-            //         this.particle.active = false;
-            //         this.particle2.active = true;
-            //     }
-            // }
-            // else{
-            //     if(this.particle.active == false){
-            //         this.particle.active = true;
-            //         this.particle2.active = false;
-            //     }
-            // }
+            if(this.jumpDistance < 450){
+                this.jumpDistance = 450;
+            }
+            else if(this.jumpDistance > 550){
+                this.jumpDistance = 550;
+            }
         }
     }
 }

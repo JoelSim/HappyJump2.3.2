@@ -261,6 +261,8 @@ export class Stage extends cc.Component {
     }
 
     public addBlock() {
+        cc.log("add block");
+
         let n ;
         let blockNode ;
         if(this.currentValue>=4 &&this.currentValue<=7){
@@ -280,8 +282,8 @@ export class Stage extends cc.Component {
 
         this.blockLayer.addChild(blockNode);
         let block = blockNode.getComponent(Block);
-        let scale = block.minScale + Math.random() * (block.maxScale - block.minScale);
-        //let scale = 1;
+        // let scale = block.minScale + Math.random() * (block.maxScale - block.minScale);
+        let scale = 1;
        // let distance = block.minDistance + Math.random() * (block.maxDistance - block.minDistance);
         blockNode.scale = scale;
         if (this.player.direction > 0) {
