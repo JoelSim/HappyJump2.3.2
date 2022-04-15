@@ -37,7 +37,7 @@ export class Stage extends cc.Component {
     @property(cc.Float)
     public arrayRatio: number = 0.556047197640118;
     @property
-    public canJump = true;
+    public canJump = false;
     @property([cc.Prefab])
     private greenblockList: Array<cc.Prefab> = [];
     @property([cc.Prefab])
@@ -101,7 +101,9 @@ export class Stage extends cc.Component {
 
     private onReadyJump() {
         if(this.checkQualify()&&!this.autoJump){
-            this.player.readyJump();
+            if(this.canJump){
+                this.player.readyJump();
+            }
         }
         else{
 
@@ -131,7 +133,7 @@ export class Stage extends cc.Component {
         }
     }
     private onJump() {
-
+        if(!this.canJump) return;
         if(!this.autoJump){
             this.blockInputLayer.active = true;
             let jumpDistance = this.player.jumpDistance;
@@ -193,45 +195,45 @@ export class Stage extends cc.Component {
 
                 });
             } else {
-                this.player.jumpTo(targetWorldPos, () => {
-                    this.playerDie = true;
-                    cc.find("Canvas/AudioManager").getComponent("AudioManager").playLoseSound();
-                    var action =  cc.rotateBy(0.2,-90);
+                // this.player.jumpTo(targetWorldPos, () => {
+                //     this.playerDie = true;
+                //     cc.find("Canvas/AudioManager").getComponent("AudioManager").playLoseSound();
+                //     var action =  cc.rotateBy(0.2,-90);
 
-                    if(!global.isDemo){
-                        var emit_result = {
-                            'host_id':global.host_id,
-                            'access_token': global.access_token,
-                            'ticket_id': global.ticket_id,
-                            'result': 0,
-                            'key': "Change bet: " + cc.find("Canvas/InGameBetting").getComponent("InGameBetting").currentBetting,
-                            'game_code': global.game_code,
-                            'description': "Get previous bet and change bet",
-                            'user_id': global.settings.user_id,
-                            'api_url':global.api_url,
-                            "changeBet":false,
+                //     if(!global.isDemo){
+                //         var emit_result = {
+                //             'host_id':global.host_id,
+                //             'access_token': global.access_token,
+                //             'ticket_id': global.ticket_id,
+                //             'result': 0,
+                //             'key': "Change bet: " + cc.find("Canvas/InGameBetting").getComponent("InGameBetting").currentBetting,
+                //             'game_code': global.game_code,
+                //             'description': "Get previous bet and change bet",
+                //             'user_id': global.settings.user_id,
+                //             'api_url':global.api_url,
+                //             "changeBet":false,
 
-                        };
-                        if(global.isEncrypt){
-                            global.getSocket().emit('send-result', ecrypt.encrypt(JSON.stringify(emit_result)));
-                        }
-                        else{
-                            global.getSocket().emit('send-result', emit_result);
-                        }
-                        this.generatingBalance = true;
-                    }
-                    else{
-                        global.settings.balance+=0;
-                        this.generatingBalance = true;
-                    }
-                    this.loadingLayer.opacity = 0;
-                    this.loadingLayer.active=true;
-                    this.timerforLoading=0;
-                    this.player.node.runAction(action);
-                    this.blockInputLayer.active = false;
+                //         };
+                //         if(global.isEncrypt){
+                //             global.getSocket().emit('send-result', ecrypt.encrypt(JSON.stringify(emit_result)));
+                //         }
+                //         else{
+                //             global.getSocket().emit('send-result', emit_result);
+                //         }
+                //         this.generatingBalance = true;
+                //     }
+                //     else{
+                //         global.settings.balance+=0;
+                //         this.generatingBalance = true;
+                //     }
+                //     this.loadingLayer.opacity = 0;
+                //     this.loadingLayer.active=true;
+                //     this.timerforLoading=0;
+                //     this.player.node.runAction(action);
+                //     this.blockInputLayer.active = false;
 
 
-                });
+                // });
             }
         }
     }
@@ -295,8 +297,8 @@ export class Stage extends cc.Component {
         }
         this.currBlock = this.nextBlock;
         this.nextBlock = block;
+        this.canJump = true;
         return block;
-
     }
 
     public removeBlock() {
@@ -431,10 +433,7 @@ export class Stage extends cc.Component {
         });
         this.loadingLayer.active = false;
         this.blockInputLayer.active = false;
-        this.canJump= true;
         this.updateBalance();
-
-
     }
 
     private onAutoJump() {

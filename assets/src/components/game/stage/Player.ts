@@ -86,7 +86,6 @@ export class Player extends cc.Component {
                 }
                 this.jumpCount=0;
             }
-            //this.direction = Math.random()>0.5?1:-1;
             this.speed = 0;
             this.jumpDistance = 0;
             cb();
@@ -94,7 +93,7 @@ export class Player extends cc.Component {
         cc.find("rotateAnchor/sprite",this.node).runAction(resetAction);
         cc.find("rotateAnchor",this.node).runAction(rotateAction);
         this.node.runAction(cc.sequence(jumpAction,finished))
-        
+        this.stage.canJump = false;
     }
 
     RandomInt(min, max){

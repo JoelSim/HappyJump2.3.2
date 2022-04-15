@@ -50,7 +50,7 @@ export class Block extends cc.Component {
                 farAnchor = anchorList[i];
             }
         }
-        if(nearAnchor.position.sub(localPos).mag() <=this.anchorOffset) {
+        // if(nearAnchor.position.sub(localPos).mag() <=this.anchorOffset) {
             if(platformState==1){
                 this.localPlayerPos = nearAnchor.position;
             }
@@ -60,9 +60,9 @@ export class Block extends cc.Component {
             this.stopAllAction(platformState);
             this.trueScore = this.getScore(platformState);
             return nearAnchor.parent.convertToWorldSpaceAR(nearAnchor.position);
-        }else{
-            return null;
-        }
+        // }else{
+        //     return null;
+        // }
 
 
     }
