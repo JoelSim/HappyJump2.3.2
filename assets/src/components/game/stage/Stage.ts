@@ -411,10 +411,7 @@ export class Stage extends cc.Component {
                 if(global.finishGetData){
                     this.generatingScore = false;
                     global.finishGetData =false;
-                    this.scheduleOnce(function(){
-                        this.emitChangebet();
-                    },1);
-
+                    this.emitChangebet();
                 }
             }
             else{

@@ -81,7 +81,6 @@ cc.Class({
         if(!this.alreadyStop){
             this.perfectScore = globalData.perfectScore;
             this.consoScore = globalData.consoScore;
-            cc.log("Gen Score:", this.perfectScore);
             this.scoreLabel.string = Math.round(this.perfectScore * 10) / 10;
         }
     },
